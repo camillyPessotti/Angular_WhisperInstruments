@@ -1,19 +1,26 @@
 <div class="fundo">
     <div class="tela">
         <div class="inputs">
-            <input [(ngModel)]='user' placeholder="Username" type="text">
+            <div class="inputs-icon">
+                <img src="./assets/user.png" style="width: 20px; height: 20px;">
+                <input [(ngModel)]='user' placeholder="Username" type="text">
+            </div>
         </div>
 
         <div class="inputs">
-            <input [(ngModel)]='password' placeholder="Password" type="password">
+            <div class="inputs-icon">
+                <img src="./assets/cadeado.png" style="width: 20px; height: 20px;">
+                <input [(ngModel)]='password' placeholder="Password" type="password">
+                <img src="./assets/vizualizar_senha.png" style="width: 20px; height: 20px;">
+            </div>
         </div>
 
-        <div class="buttons">
-            <button (click)='logar()'><img src="./login.png">Login</button>
+        <div class=" buttons ">
+            <button (click)='logar()'><img src="./assets/fazer_login.png " style="width: 20px; height: 20px; ">Login</button>
         </div>
 
-        <div class="buttons">
-            <button (click)='logarGoogle()'><img src="./google.png">Logar com o Google</button>
+        <div class="buttons ">
+            <button (click)='logarGoogle()'><img src="./assets/google.png " style="width: 20px; height: 20px; ">Logar com o Google</button>
         </div>
     </div>
 </div>
