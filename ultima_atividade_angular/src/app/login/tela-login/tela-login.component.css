@@ -42,6 +42,18 @@
     color: #707070;
 }
 
+.div-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #DCDCDC;
+}
+
+.div-inputs img {
+    padding: 5px;
+}
+
 .buttons {
     padding: 10px;
 }

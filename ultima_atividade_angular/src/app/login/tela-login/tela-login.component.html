@@ -1,26 +1,38 @@
 <div class="fundo">
     <div class="tela">
         <div class="inputs">
-            <div class="inputs-icon">
-                <img src="./assets/user.png" style="width: 20px; height: 20px;">
+            <div class="div-inputs">
+
+                <i class="fi fi-rr-user"></i>
+
                 <input [(ngModel)]='user' placeholder="Username" type="text">
             </div>
         </div>
 
         <div class="inputs">
-            <div class="inputs-icon">
-                <img src="./assets/cadeado.png" style="width: 20px; height: 20px;">
+            <div class="div-inputs">
+                <i class="fi fi-rr-lock"></i>
+
                 <input [(ngModel)]='password' placeholder="Password" type="password">
-                <img src="./assets/vizualizar_senha.png" style="width: 20px; height: 20px;">
+
+                <i class="fi fi-rr-eye"></i>
             </div>
         </div>
 
         <div class=" buttons ">
-            <button (click)='logar()'><img src="./assets/fazer_login.png " style="width: 20px; height: 20px; ">Login</button>
+            <button (click)='logar()'><i class="fi fi-rr-sign-in-alt"></i>Login</button>
         </div>
 
         <div class="buttons ">
-            <button (click)='logarGoogle()'><img src="./assets/google.png " style="width: 20px; height: 20px; ">Logar com o Google</button>
+            <button (click)='logarGoogle()'><img src="./assets/fazer_login_com_google.png" style="width: 20px; height: 20px; ">Logar com o Google</button>
         </div>
     </div>
 </div>
+
+<!-- <i class="fi fi-rr-eye-crossed"></i> - Não vizualizar senha -->
+<!-- <i class="fi fi-rr-home"></i> - Home -->
+<!-- <i class="fi fi-rr-shopping-cart"></i> - Carrinho -->
+<!-- <i class="fi fi-rr-headset"></i> - Fale conosco -->
+<!-- <i class="fi fi-rr-menu-burger"></i> - Menu -->
+<!-- <i class="fi fi-rr-shopping-cart-add"></i> - Adicionar ao carrinho -->
+<!-- <i class="fi fi-rr-trash"></i> - Lixeira -->
