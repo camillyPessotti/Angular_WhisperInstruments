@@ -50,8 +50,9 @@
     background: #DCDCDC;
 }
 
-.div-inputs img {
-    padding: 5px;
+.div-inputs i {
+    height: 25px;
+    color: #707070;
 }
 
 .buttons {
