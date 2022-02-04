@@ -29,7 +29,7 @@
 
 .inputs input {
     padding: 10px;
-    width: auto;
+    width: 100%;
     height: auto;
     border: none;
     border-radius: 10px;
@@ -44,14 +44,15 @@
 
 .div-inputs {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 25vw;
     border-radius: 10px;
     background: #DCDCDC;
 }
 
 .div-inputs i {
-    height: 25px;
+    padding: 10px;
     color: #707070;
 }
 
@@ -61,8 +62,7 @@
 
 .buttons button {
     padding: 10px;
-    width: auto;
-    height: auto;
+    width: 12.5vw;
     border: none;
     border-radius: 10px;
     color: #ffffff;
