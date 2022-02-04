@@ -62,9 +62,20 @@
 
 .buttons button {
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 12.5vw;
     border: none;
     border-radius: 10px;
     color: #ffffff;
     background-color: #B0E0E6;
+}
+
+.buttons i {
+    padding: 0px 10px 0px 0px;
+}
+
+.buttons img {
+    padding: 0px 10px 0px 0px;
 }

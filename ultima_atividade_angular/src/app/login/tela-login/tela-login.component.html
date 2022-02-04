@@ -5,7 +5,7 @@
 
                 <i class="fi fi-rr-user"></i>
 
-                <input [(ngModel)]='user' placeholder="Username" type="text">
+                <input [(ngModel)]='user' placeholder="Usuário" type="text">
 
                 <i class="fi fi-rr-eye" style="color: transparent;" (click)='verSenha()'></i>
             </div>
@@ -15,18 +15,18 @@
             <div class="div-inputs">
                 <i class="fi fi-rr-lock"></i>
 
-                <input [(ngModel)]='password' placeholder="Password" type="password">
+                <input [(ngModel)]='password' placeholder="Senha" type="password">
 
                 <i class="fi fi-rr-eye"></i>
             </div>
         </div>
 
         <div class=" buttons ">
-            <button (click)='logar()'><i class="fi fi-rr-sign-in-alt"></i>Login</button>
+            <button (click)='entrar()'><i class="fi fi-rr-sign-in-alt"></i>Entrar</button>
         </div>
 
         <div class="buttons ">
-            <button (click)='logarGoogle()'>Logar com o Google</button>
+            <button (click)='entrarGoogle()'><img src="./assets/fazer_login_com_google.png" style="width: 15px; height: auto;">Entrar com o Google</button>
         </div>
     </div>
 </div>
