@@ -4,20 +4,24 @@ import { FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TelaLoginComponent } from './login/tela-login/tela-login.component';
+import { TelaHomeComponent } from './home/tela-home/tela-home.component';
 
 const routes: Routes = [
-  {path: '', component: TelaLoginComponent}
+  {path: '', component: TelaHomeComponent}
+  
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    TelaLoginComponent
+    TelaLoginComponent,
+    TelaHomeComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
