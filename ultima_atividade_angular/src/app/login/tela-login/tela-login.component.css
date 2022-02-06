@@ -34,12 +34,16 @@
     border: none;
     border-radius: 10px;
     outline: none;
-    color: #000000;
+    color: #707070;
     background-color: #DCDCDC;
 }
 
 .inputs input::placeholder {
     color: #707070;
+}
+
+.inputs input:hover {
+    cursor: text;
 }
 
 .div-inputs {
@@ -70,6 +74,10 @@
     border-radius: 10px;
     color: #ffffff;
     background-color: #B0E0E6;
+}
+
+.buttons button:hover {
+    cursor: pointer;
 }
 
 .buttons i {
