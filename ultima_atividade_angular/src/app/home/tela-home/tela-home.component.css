@@ -109,6 +109,19 @@
     color: #ff5100;
 }
 
+.produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtos ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* .middle {
     position: absolute;

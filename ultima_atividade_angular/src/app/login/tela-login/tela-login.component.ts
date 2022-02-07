@@ -6,7 +6,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './tela-login.component.html',
   styleUrls: ['./tela-login.component.css']
 })
-
 export class TelaLoginComponent implements OnInit {
 
   user = '';
@@ -18,13 +17,14 @@ export class TelaLoginComponent implements OnInit {
 
   ngOnInit() {}
 
-  entrar(){
+  logar(){
     localStorage.setItem('USER', this.user);
     localStorage.setItem('PASSWORD', this.password);
     this.router.navigate([''])
   }
 
-  entrarGoogle() {}
+  logarGoogle(){}
 
-  verSenha() {}
+  verSenha(){}
+
 }
