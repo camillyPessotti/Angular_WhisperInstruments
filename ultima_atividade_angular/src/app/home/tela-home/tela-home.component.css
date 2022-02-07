@@ -10,21 +10,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .first-container {
-    padding: 10px;
+    padding: 10px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 3vh;
     background-color: #000000;
 }
 
 .div-text {
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,11 +31,18 @@
 
 .text {
     padding: 0px 10px;
+}
+
+.text p {
     color: #ffffff;
 }
 
+.text p:hover {
+    cursor: pointer;
+    color: #ff5100;
+}
+
 .div-icon {
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,3 +55,99 @@
 .icon i {
     color: #ffffff;
 }
+
+.icon i:hover {
+    cursor: pointer;
+    color: #ff5100;
+}
+
+.second-container {
+    padding: 10px 0px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #000000;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: #000000;
+}
+
+.title p {
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: #808080;
+}
+
+.third-container {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3vh;
+    border-bottom: solid 1px #000000;
+}
+
+.tabs {
+    padding: 0px 20px;
+}
+
+.tabs:hover {
+    cursor: pointer;
+    color: #ff5100;
+}
+
+
+/* .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #ff7675;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+
+.btn::before {
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn1::before {
+    width: 0%;
+    height: 100%;
+}
+
+.btn1:hover::before {
+    width: 100%;
+} */
