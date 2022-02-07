@@ -6,7 +6,7 @@ inserirRota('/buscar_usuario', function(dados, resposta) {
             resposta({ list: result });
         })
         .catch(erro => {
-            resposta({ erro: 'Erro ao inserir o usuario!' });
+            resposta({});
         });
 });
 
@@ -21,15 +21,7 @@ inserirRota('/criar_usuario', function(dados, resposta) {
         return resposta({ erro: 'É necessário preencher o nickname' })
     };
 
-    database(`INSERT INTO USERS
-    (
-        NOME, NICKNAME
-        ) 
-        VALUES 
-        (
-            "${dados.nome}", 
-            "${dados.nickname}"
-            )`)
+    database(`INSERT INTO USERS (NOME, NICKNAME) VALUES ("${dados.nome}", "${dados.nickname}")`)
         .then(result => {
             console.log('Usuario inserido com sucesso!');
             resposta({ menssage: 'Usuario inserido com sucesso' });
@@ -39,3 +31,22 @@ inserirRota('/criar_usuario', function(dados, resposta) {
             resposta({ erro: 'Erro ao inserir o usuario!' });
         });
 });
+
+
+
+// fetch('/api/buscar_usuario', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         nome: 'sim',
+//         nickname: 'sim'
+//     }),
+//     headers: {
+//         'Content-Type': 'application/json'
+//     }
+// }).then(function (result){
+//     return result.json();
+// }).then(function (dados){ 
+//     console.log(dados);
+// }).catch(function (erro){
+//     console.log(erro)
+// });
