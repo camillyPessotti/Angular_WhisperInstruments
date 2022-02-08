@@ -7,6 +7,18 @@ export class UsuariosService {
 
   constructor() { }
 
-login(){}
+  buscar_usuarios() {
+    return new Promise((resolvido, rejeitado) => {
+
+      fetch('/api/buscar_usuario', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
 
 }

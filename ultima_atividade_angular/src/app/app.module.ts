@@ -7,7 +7,8 @@ import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { TelaHomeComponent } from './home/tela-home/tela-home.component';
 
 const routes: Routes = [
-  {path: '', component: TelaHomeComponent}
+  {path: '', component: TelaHomeComponent},
+  {path: 'tela-login', component: TelaLoginComponent}
   
 ]
 

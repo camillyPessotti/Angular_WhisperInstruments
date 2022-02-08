@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UsuariosService } from '../../services/usuarios.service';
 
 @Component({
   selector: 'app-tela-login',
@@ -13,17 +14,25 @@ export class TelaLoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router) {}
+    private router: Router,
+    private usuariosService: UsuariosService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.usuariosService.buscar_usuarios()
+    .then(resultado => {
+      console.log('RESULTADO:', resultado);
+    }).catch(erro => {
+      console.log('ERRO AO BUSCAR USUARIOS:', erro);
+    })
+  }
 
-  logar(){
+  entrar(){
     localStorage.setItem('USER', this.user);
     localStorage.setItem('PASSWORD', this.password);
     this.router.navigate([''])
   }
 
-  logarGoogle(){}
+  entrarGoogle(){}
 
   verSenha(){}
 

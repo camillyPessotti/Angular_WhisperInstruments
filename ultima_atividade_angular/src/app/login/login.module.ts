@@ -6,9 +6,6 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    RouterModule.forRoot([
-      {path: 'tela-login', component: TelaLoginComponent}
-    ]),
     CommonModule,
     FormsModule,
     NgModel
