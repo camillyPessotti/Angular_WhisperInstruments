@@ -92,11 +92,11 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 
 
 // database(`INSERT INTO CLIENTE VALUES 
-// (null, 'camillypessotti@gmail.com', 'camillyPessotti', '12345', '11111111111'),
-// (null, 'joaomeireles@gmail.com', 'joaoMeireles', '12222', '22222222222'),
-// (null, 'diegoplaninscheck@gmail.com', 'diegoPlaninscheck', '13333', '33333333333'),
-// (null, 'brunamafra@gmail.com', 'brunaMafra', '14444', '44444444444'),
-// (null, 'leonardorafaelli@gmail.com', 'leonardoRafaelli', '15555', '55555555555')`)
+// (null, 'camillypessotti@gmail.com', 'camillyPessotti', '11111', '11111111111'),
+// (null, 'joaomeireles@gmail.com', 'joaoMeireles', '22222', '22222222222'),
+// (null, 'diegoplaninscheck@gmail.com', 'diegoPlaninscheck', '33333', '33333333333'),
+// (null, 'brunamafra@gmail.com', 'brunaMafra', '44444', '44444444444'),
+// (null, 'leonardorafaelli@gmail.com', 'leonardoRafaelli', '55555', '55555555555')`)
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela CLIENTE');
 //     }).catch(erro => {
