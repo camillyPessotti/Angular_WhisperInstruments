@@ -1,3 +1,15 @@
+inserirRota('/ver_clientes', function(dados, resposta) {
+    database('')
+        .then(result => {
+            resposta(result)
+        }).catch(erro => {
+            console.log('DEU BOSTA')
+            resposta({ erro })
+        })
+})
+
+
+
 // fetch('/api/buscar_usuario', {
 //     method: 'POST',
 //     body: JSON.stringify({

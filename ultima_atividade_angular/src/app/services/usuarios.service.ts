@@ -21,4 +21,18 @@ export class UsuariosService {
     })
   }
 
+  buscar_clientes() {
+    return new Promise((resolvido, rejeitado) => {
+
+      fetch('/api/ver_clientes', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
 }

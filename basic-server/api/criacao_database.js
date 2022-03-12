@@ -26,7 +26,7 @@ database(`CREATE TABLE IF NOT EXISTS PESSOA (
 
 
 database(`CREATE TABLE IF NOT EXISTS CLIENTE (
-    CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    CODIGO INT AUTO_INCREMENT PRIMARY KEY not null,
     EMAIL VARCHAR(100),
     USERNAME VARCHAR(45) NOT NULL, 
     PASSWORD VARCHAR(15) NOT NULL,
@@ -52,13 +52,12 @@ database(`CREATE TABLE IF NOT EXISTS CLASSE (
 
 database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    INSTRUMENTO VARCHAR(45) NOT NULL,
     MARCA VARCHAR(45) NOT NULL,
-    VALOR VARCHAR(45) NOT NULL,
+    VALOR DOUBLE NOT NULL,
     COR VARCHAR(45) NOT NULL,
     CLASSE_CODIGO INT NOT NULL,
-    CLIENTE_CODIGO INT NOT NULL,
-    FOREIGN KEY (CLASSE_CODIGO) REFERENCES CLASSE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (CLIENTE_CODIGO) REFERENCES CLIENTE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE)`)
+    FOREIGN KEY (CLASSE_CODIGO) REFERENCES CLASSE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE)`)
     .then(result => {
         console.log('Tabela PRODUTO criada com SUCESSO');
     }).catch(erro => {
@@ -100,6 +99,7 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela CLIENTE');
 //     }).catch(erro => {
+
 //         console.log('ERRO ao inserir dados na tabela CLIENTE');
 //     });
 
@@ -113,4 +113,22 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 //         console.log('Dados inseridos com SUCESSO na tabela CLASSE');
 //     }).catch(erro => {
 //         console.log('ERRO ao inserir dados na tabela CLASSE');
+//     });
+
+
+// database(`INSERT INTO PRODUTO VALUES
+// (null, 'Violão', 'Giannini', 3500.00, 'Preto', 1),
+// (null, 'Violão', 'Rozini', 700.00, 'Marrom', 1),
+// (null, 'Guitarra', 'Tagima', 1500.00, 'Vermelho', 4),
+// (null, 'Guitarra', 'Waldman', 5000.00, 'Branco', 4),
+// (null, 'Piano', 'Yamaha', 20000.00, 'Preto', 1),
+// (null, 'Piano', 'Casio', 100000.00, 'Branco', 1),
+// (null, 'Bateria', 'Pearl', 4000.00, 'Verde', 3),
+// (null, 'Bateria', 'Gretsch', 2000.00, 'Amarelo', 3),
+// (null, 'Oboé', 'Lorée', 2900.00, 'Preto', 2),
+// (null, 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
+//     .then(result => {
+//         console.log('Dados inseridos com SUCESSO na tabela PRODUTO');
+//     }).catch(erro => {
+//         console.log('ERRO ao inserir dados na tabela PRODUTO');
 //     });
