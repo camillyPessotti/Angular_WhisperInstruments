@@ -34,7 +34,6 @@
             <div class="second-container">
                 <div class="title">
                     <h1>WHISPER</h1>
-
                     <p>INSTRUMENTOS</p>
                 </div>
             </div>
@@ -72,18 +71,10 @@
     </header>
 
     <main>
-        <div class="main-container">
-            <div class="row-products">
-                <div class="product">
-                    <div class="img-produtct">
-                        <img src="./assets/piano_1.jpeg" style="width: 200px;">
-                    </div>
-
-                    <div class="info-product">
-                        <p>Marca: Yamaha</p>
-                        <p>Preço: R$ 20.000,00</p>
-                    </div>
-                </div>
+        <div>
+            <div *ngFor="let produto of listaProduto" class="info-product">
+                <p>Marca: {{produto.MARCA}}</p>
+                <p>Preço: {{produto.VALOR}}</p>
             </div>
         </div>
     </main>
@@ -119,7 +110,7 @@
             </div>
 
             <div class="copyright">
-                <p>© 2022 Camilly Pessotti</p>
+                <p>&copy; 2022 Camilly Pessotti</p>
             </div>
         </div>
     </footer>

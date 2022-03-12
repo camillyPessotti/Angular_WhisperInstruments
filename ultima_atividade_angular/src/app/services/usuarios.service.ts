@@ -7,10 +7,11 @@ export class UsuariosService {
 
   constructor() { }
 
-  buscar_usuarios() {
+
+  buscar_clientes() {
     return new Promise((resolvido, rejeitado) => {
 
-      fetch('/api/buscar_usuario', {
+      fetch('/api/ver_clientes', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -21,10 +22,11 @@ export class UsuariosService {
     })
   }
 
-  buscar_clientes() {
+
+  buscar_produtos(){
     return new Promise((resolvido, rejeitado) => {
 
-      fetch('/api/ver_clientes', {
+      fetch('/api/ver_produtos', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'

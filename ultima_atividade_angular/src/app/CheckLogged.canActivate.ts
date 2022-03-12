@@ -28,7 +28,7 @@ class CheckLoggedProfessor implements CanActivate {
         let password = localStorage.getItem("PASSWORD")
 
         if (!user && !password) {
-            this.router.navigate([''])
+            this.router.navigate(['/tela-login'])
             return false;
         } else {
             this.usuariosService.buscar_clientes()
@@ -48,17 +48,6 @@ class CheckLoggedProfessor implements CanActivate {
 
         return true
     }
-}
-
-interface pessoa {
-    EMAIL: string
-    IDADE: number
-    NOME: string
-    PROFESSOR: boolean
-    RG: string
-    SENHA: string
-    SEXO: string
-    USUARIO: string
 }
 
 export default CheckLoggedProfessor;

@@ -1,13 +1,23 @@
 inserirRota('/ver_clientes', function(dados, resposta) {
-    database('')
+    database('SELECT * FROM CLIENTE')
         .then(result => {
             resposta(result)
         }).catch(erro => {
-            console.log('DEU BOSTA')
+            console.log('ERRO ao buscar CLIENTE')
             resposta({ erro })
         })
 })
 
+
+inserirRota('/ver_produtos', function(dados, resposta) {
+    database('SELECT * FROM PRODUTO')
+        .then(result => {
+            resposta(result)
+        }).catch(erro => {
+            console.log('ERRO ao buscar PRODUTO')
+            resposta({ erro })
+        })
+})
 
 
 // fetch('/api/buscar_usuario', {
