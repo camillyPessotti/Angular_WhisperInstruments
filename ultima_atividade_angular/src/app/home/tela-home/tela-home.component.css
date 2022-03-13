@@ -5,12 +5,17 @@
     font-family: 'Century Gothic';
 }
 
+body {
+    box-sizing: border-box;
+}
+
 .navbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .first-container {
@@ -112,11 +117,29 @@
     color: #ff5100;
 }
 
-.main-container {
+.product {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
     padding: 10px;
     width: 100%;
+    background-color: #ffffff;
     box-sizing: border-box;
-    background-color: #f1f1f1;
+}
+
+.info-product {
+    padding: 10px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 1em #808080;
 }
 
 .footer-container {
@@ -127,6 +150,7 @@
     align-items: center;
     width: 100%;
     background-color: #000000;
+    box-sizing: border-box;
 }
 
 .div-social-networks {

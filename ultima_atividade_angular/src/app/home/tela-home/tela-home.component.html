@@ -71,8 +71,9 @@
     </header>
 
     <main>
-        <div>
+        <div class="product">
             <div *ngFor="let produto of listaProduto" class="info-product">
+                <p style="font-size: 25px;">{{produto.INSTRUMENTO}}</p>
                 <p>Marca: {{produto.MARCA}}</p>
                 <p>Preço: {{produto.VALOR}}</p>
             </div>
