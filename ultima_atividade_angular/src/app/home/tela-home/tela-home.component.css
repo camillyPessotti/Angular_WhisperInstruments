@@ -142,6 +142,35 @@ body {
     box-shadow: 0 0 1pc #cecece;
 }
 
+.img-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.info-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.button-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.button-product button {
+    padding: 5px;
+    width: auto;
+    height: 25%;
+}
+
 .footer-container {
     padding: 20px 0px;
     display: flex;
