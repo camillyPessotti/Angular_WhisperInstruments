@@ -117,7 +117,7 @@ body {
     color: #ff5100;
 }
 
-.product {
+.div-product {
     display: flex;
     flex-flow: wrap;
     justify-content: space-around;
@@ -128,7 +128,7 @@ body {
     box-sizing: border-box;
 }
 
-.info-product {
+.product {
     padding: 10px;
     margin: 1%;
     display: flex;
