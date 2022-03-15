@@ -166,9 +166,18 @@ body {
 }
 
 .button-product button {
-    padding: 5px;
+    padding: 10px;
     width: auto;
     height: 25%;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.button-product button:hover {
+    cursor: pointer;
+    background-color: #ff5100;
 }
 
 .footer-container {
