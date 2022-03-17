@@ -23,7 +23,7 @@ body {
     top: 0;
     padding: 10px 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 3vh;
@@ -47,7 +47,7 @@ body {
 .text p:hover {
     cursor: pointer;
     color: #ff5100;
-    transition: 1s;
+    transition: .4s;
 }
 
 .div-icon {
@@ -67,7 +67,7 @@ body {
 .icon i:hover {
     cursor: pointer;
     color: #ff5100;
-    transition: 1s;
+    transition: .4s;
 }
 
 .second-container {
@@ -117,7 +117,7 @@ body {
 .tabs:hover {
     cursor: pointer;
     color: #ff5100;
-    transition: 1s;
+    transition: .4s;
 }
 
 .div-product {
@@ -181,7 +181,7 @@ body {
 .button-product button:hover {
     cursor: pointer;
     background-color: #ff5100;
-    transition: 1s;
+    transition: .4s;
 }
 
 .footer-container {
