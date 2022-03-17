@@ -47,6 +47,7 @@ body {
 .text p:hover {
     cursor: pointer;
     color: #ff5100;
+    transition: 1s;
 }
 
 .div-icon {
@@ -66,6 +67,7 @@ body {
 .icon i:hover {
     cursor: pointer;
     color: #ff5100;
+    transition: 1s;
 }
 
 .second-container {
@@ -115,6 +117,7 @@ body {
 .tabs:hover {
     cursor: pointer;
     color: #ff5100;
+    transition: 1s;
 }
 
 .div-product {
@@ -178,6 +181,7 @@ body {
 .button-product button:hover {
     cursor: pointer;
     background-color: #ff5100;
+    transition: 1s;
 }
 
 .footer-container {
