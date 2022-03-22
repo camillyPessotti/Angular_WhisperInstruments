@@ -36,7 +36,7 @@ export class TelaLoginComponent implements OnInit {
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);
-        this.router.navigate([''])
+        this.router.navigate(['/tela-carrinho'])
     }
   );
 }
@@ -49,7 +49,7 @@ export class TelaLoginComponent implements OnInit {
           if (valorResultadao.USERNAME == this.user && valorResultadao.PASSWORD == this.password) {
             localStorage.setItem("USER", this.user);
             localStorage.setItem("PASSWORD", this.password);
-            this.router.navigate([''])
+            this.router.navigate(['/tela-carrinho'])
           }
         })
       })
