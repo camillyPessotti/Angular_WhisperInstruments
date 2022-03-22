@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-carrinho',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaCarrinhoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
+  }
+
+  irProLogin(){
+    this.router.navigate(['/tela-login'])
+  }
+
+  voltar(){
+    this.router.navigate([''])
   }
 
 }
