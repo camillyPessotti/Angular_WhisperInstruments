@@ -41,6 +41,7 @@ export class TelaLoginComponent implements OnInit {
   );
 }
 
+  verifica = 0;
 
   entrar() {
     this.usuariosService.buscar_clientes()
@@ -50,9 +51,16 @@ export class TelaLoginComponent implements OnInit {
             localStorage.setItem("USER", this.user);
             localStorage.setItem("PASSWORD", this.password);
             this.router.navigate(['/tela-carrinho'])
+          } else{
+            this.verifica = 1;
           }
         })
       })
+
+      if(this.verifica == 1){
+        alert("Usuário não encontrado!");
+        this.verifica = 0;
+      }
   }
 
 
