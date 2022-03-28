@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { TelaHomeComponent } from './home/tela-home/tela-home.component';
 import { TelaCarrinhoComponent } from './carrinho/tela-carrinho/tela-carrinho.component';
+import { TelaProdutoComponent } from './produto/tela-produto/tela-produto.component';
 
 import {
   SocialLoginModule,
@@ -16,7 +17,8 @@ import {
 const routes: Routes = [
   {path: '', component: TelaHomeComponent},
   {path: 'tela-login', component: TelaLoginComponent},
-  {path: 'tela-carrinho', component: TelaCarrinhoComponent}  
+  {path: 'tela-carrinho', component: TelaCarrinhoComponent},
+  {path: 'tela-produto/:id_produto', component: TelaProdutoComponent}  
 ]
 
 export function getAuthServiceConfigs() {
@@ -36,7 +38,8 @@ export function getAuthServiceConfigs() {
     AppComponent,
     TelaLoginComponent,
     TelaHomeComponent,
-    TelaCarrinhoComponent
+    TelaCarrinhoComponent,
+    TelaProdutoComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

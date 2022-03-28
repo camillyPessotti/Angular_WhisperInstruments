@@ -72,9 +72,9 @@
 
     <main>
         <div class="div-product">
-            <div *ngFor="let produto of listaProduto" class="product">
+            <div *ngFor="let produto of listaProduto; let i = index" class="product">
                 <div class="img-product">
-                    <img src="./assets/violão.jpg" style="width: 300px;">
+                    <img src="{{produto.URL}}" style="width: 300px;">
                 </div>
 
                 <div class="info-product">
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="button-product">
-                    <button>Ver produto</button>
+                    <button (click)='verProduto(i + 1)'>Ver produto</button>
                 </div>
             </div>
         </div>

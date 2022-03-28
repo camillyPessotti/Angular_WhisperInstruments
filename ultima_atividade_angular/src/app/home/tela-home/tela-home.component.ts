@@ -31,5 +31,9 @@ export class TelaHomeComponent implements OnInit {
   irProCarrinho(){
     this.router.navigate(['/tela-carrinho'])
   }
+
+  verProduto(i){
+    this.router.navigate(['/tela-produto', i])
+  }
   
 }

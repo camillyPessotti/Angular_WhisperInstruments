@@ -52,6 +52,7 @@ database(`CREATE TABLE IF NOT EXISTS CLASSE (
 
 database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     CODIGO INT AUTO_INCREMENT PRIMARY KEY,
+    URL VARCHAR(200) NOT NULL,
     INSTRUMENTO VARCHAR(45) NOT NULL,
     MARCA VARCHAR(45) NOT NULL,
     VALOR DOUBLE NOT NULL,
@@ -117,16 +118,16 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 
 
 // database(`INSERT INTO PRODUTO VALUES
-// (null, 'Violão', 'Giannini', 3500.00, 'Preto', 1),
-// (null, 'Violão', 'Rozini', 700.00, 'Marrom', 1),
-// (null, 'Guitarra', 'Tagima', 1500.00, 'Vermelho', 4),
-// (null, 'Guitarra', 'Waldman', 5000.00, 'Branco', 4),
-// (null, 'Piano', 'Yamaha', 20000.00, 'Preto', 1),
-// (null, 'Piano', 'Casio', 100000.00, 'Branco', 1),
-// (null, 'Bateria', 'Pearl', 4000.00, 'Verde', 3),
-// (null, 'Bateria', 'Gretsch', 2000.00, 'Amarelo', 3),
-// (null, 'Oboé', 'Lorée', 2900.00, 'Preto', 2),
-// (null, 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
+// (null, 'https://d1nl8byu0zovrm.cloudfront.net/Custom/Content/Products/16/15/1615_violao-giannini-gdc-1-eq-sbk-performance-folk-eletrico-preto-fosco-pr-6706-gdc-1-eq-sbk_z3_637747240024381492.jpg', 'Violão', 'Giannini', 3500.00, 'Preto', 1),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_614674-MLB44546361386_012021-O.webp', 'Violão', 'Rozini', 700.00, 'Marrom', 1),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_690609-MLA46362910952_062021-O.webp', 'Guitarra', 'Tagima', 1500.00, 'Vermelho', 4),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_910420-MLB49342872981_032022-O.webphttps://http2.mlstatic.com/D_NQ_NP_910420-MLB49342872981_032022-O.webp', 'Guitarra', 'Waldman', 5000.00, 'Branco', 4),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_726536-MLB48121256841_112021-O.webp', 'Piano', 'Yamaha', 20000.00, 'Preto', 1),
+// (null, 'https://www.teclacenter.com.br/images/ab__webp/thumbnails/550/450/detailed/309/casio-px-870-privia-piano-digital-branco-414340_jpg.webp', 'Piano', 'Casio', 100000.00, 'Branco', 1),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_751806-MLB31867949881_082019-O.webp', 'Bateria', 'Pearl', 4000.00, 'Verde', 3),
+// (null, 'https://http2.mlstatic.com/D_NQ_NP_359605-MLB25064100732_092016-O.webp', 'Bateria', 'Gretsch', 2000.00, 'Amarelo', 3),
+// (null, 'https://www.le-roseau-oboe.com/cms/wp-content/uploads/2017/11/hautbois-f-loree-royal-125.jpg', 'Oboé', 'Lorée', 2900.00, 'Preto', 2),
+// (null, 'https://a-static.mlcdn.com.br/618x463/flauta-transversal-prateada-do-case-fl03s-eagle-o-f-e-r-t/lojacosntelacao/7799744868/394052378e487443659d5135243cf809.jpg', 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela PRODUTO');
 //     }).catch(erro => {
