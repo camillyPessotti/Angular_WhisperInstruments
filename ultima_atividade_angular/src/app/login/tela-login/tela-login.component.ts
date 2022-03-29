@@ -32,7 +32,6 @@ export class TelaLoginComponent implements OnInit {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     } 
     
-
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);
@@ -41,26 +40,23 @@ export class TelaLoginComponent implements OnInit {
   );
 }
 
-  verifica = 0;
+  verifica
 
   entrar() {
     this.usuariosService.buscar_clientes()
       .then((resultado: any) => {
-        resultado.find(valorResultadao => {
-          if (valorResultadao.USERNAME == this.user && valorResultadao.PASSWORD == this.password) {
+        for(let i = 0; i < resultado.length; i++ ){
+          if (resultado[i].USERNAME == this.user && resultado[i].PASSWORD == this.password) {
             localStorage.setItem("USER", this.user);
             localStorage.setItem("PASSWORD", this.password);
-            this.router.navigate(['/tela-carrinho'])
-          } else{
-            this.verifica = 1;
+            this.router.navigate(['/tela-carrinho']);
+            break;
           }
-        })
+          if(i == resultado.length - 1){
+            alert("teste");
+          }
+        }
       })
-
-      if(this.verifica == 1){
-        alert("Usuário não encontrado!");
-        this.verifica = 0;
-      }
   }
 
 

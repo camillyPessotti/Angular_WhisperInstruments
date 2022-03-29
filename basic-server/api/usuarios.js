@@ -1,6 +1,7 @@
 inserirRota('/ver_clientes', function(dados, resposta) {
     database('SELECT * FROM CLIENTE')
         .then(result => {
+            console.log(result);
             resposta(result)
         }).catch(erro => {
             console.log('ERRO ao buscar CLIENTE')
