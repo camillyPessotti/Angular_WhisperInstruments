@@ -1,0 +1,142 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.first-container {
+    position: fixed;
+    top: 0;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 3vh;
+    background-color: #000000;
+}
+
+.div-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    padding: 0px 10px;
+}
+
+.text p {
+    color: #ffffff;
+}
+
+.text p:hover {
+    cursor: pointer;
+    color: #ff5100;
+    transition: .4s;
+}
+
+.div-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    padding: 0px 10px;
+}
+
+.icon i {
+    color: #ffffff;
+}
+
+.icon i:hover {
+    cursor: pointer;
+    color: #ff5100;
+    transition: .4s;
+}
+
+.second-container {
+    margin-top: 6vh;
+    padding: 10px 0px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #000000;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 32px;
+    letter-spacing: 5px;
+    color: #000000;
+}
+
+.title p {
+    font-weight: 100;
+    letter-spacing: 5px;
+    color: #808080;
+}
+
+.footer-container {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+
+.div-social-networks {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-network {
+    padding: 0px 10px;
+}
+
+.div-informations {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.copyright {
+    padding: 10px;
+    font-size: 15px;
+    color: #808080;
+}
