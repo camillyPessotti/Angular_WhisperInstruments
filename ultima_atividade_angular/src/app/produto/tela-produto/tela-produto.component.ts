@@ -15,10 +15,12 @@ export class TelaProdutoComponent implements OnInit {
   ) { }
 
     index
-    nome
+    url
+    instrumento
     valor
     imagem
     marca
+    cor
 
   ngOnInit() {
     this.index = this.router.url.substring(this.router.url.length - 1)
@@ -28,10 +30,12 @@ export class TelaProdutoComponent implements OnInit {
       resultado.find(valor => {
         console.log(valor)
         if(valor.CODIGO == this.index){
-          this.nome = valor.NOME
+          this.url = valor.URL
+          this.instrumento = valor.INSTRUMENTO
           this.valor = valor.VALOR
           this.imagem = valor.URL
           this.marca = valor.MARCA
+          this.cor = valor.COR
         }
       })
     })
