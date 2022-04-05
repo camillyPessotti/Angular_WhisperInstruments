@@ -40,4 +40,8 @@ export class TelaProdutoComponent implements OnInit {
       })
     })
   }
+
+  irProHome(){
+    this.router.navigate([''])
+  }
 }

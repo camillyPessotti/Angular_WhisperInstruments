@@ -53,7 +53,7 @@ export class TelaLoginComponent implements OnInit {
             break;
           }
           if(i == resultado.length - 1){
-            alert("teste");
+            alert("Usuário inválido!");
           }
         }
       })

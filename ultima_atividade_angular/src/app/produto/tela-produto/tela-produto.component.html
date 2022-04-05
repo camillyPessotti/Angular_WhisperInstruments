@@ -18,7 +18,7 @@
 
                 <div class="div-icon">
                     <div class="icon">
-                        <i class="fi fi-rr-shopping-cart" (click)="irProCarrinho()"></i>
+                        <i class="fi fi-rr-home" (click)="irProHome()"></i>
                     </div>
 
                     <div class="icon">
@@ -63,7 +63,29 @@
             </div>
 
             <div class="thrind-column">
+                <div class="title">
+                    <h1>{{instrumento}}</h1>
+                </div>
 
+                <div class="infos">
+                    <p>Marca: {{marca}}</p>
+                </div>
+
+                <div class="infos">
+                    <p>Cor: {{cor}}</p>
+                </div>
+
+                <div class="infos">
+                    <p>{{descricao}}</p>
+                </div>
+
+                <div class="infos">
+                    <p>Preço: R$ {{valor}},00</p>
+                </div>
+
+                <div class="button-div">
+                    <button>Adicionar ao carrinho</button>
+                </div>
             </div>
         </div>
     </main>
