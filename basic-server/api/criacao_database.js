@@ -53,6 +53,7 @@ database(`CREATE TABLE IF NOT EXISTS CLASSE (
 database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     CODIGO INT AUTO_INCREMENT PRIMARY KEY,
     URL VARCHAR(200) NOT NULL,
+    DESCRICAO VARCHAR(1000),
     INSTRUMENTO VARCHAR(45) NOT NULL,
     MARCA VARCHAR(45) NOT NULL,
     VALOR DOUBLE NOT NULL,
@@ -65,17 +66,17 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
         console.log('ERRO ao criar a tabela PRODUTO');
     });
 
-// database(`INSERT INTO ENDERECO VALUES 
-// (1, 'Olga Erdmann', 'Barra do Rio Cerro', 'Jaraguá do Sul', 'Santa Catarina'),
-// (2, 'Afonso Beijamin Barbie', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina'),
-// (3, 'Albano Piccoli', 'São Luís', 'Jaraguá do Sul', 'Santa Catarina'),
-// (4, 'Rua das Orquídeas', 'Jaraguá 99', 'Jaraguá do Sul', 'Santa Catarina'),
-// (5, 'José Narloch', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina')`)
-//     .then(result => {
-//         console.log('Dados inseridos com SUCESSO na tabela ENDERECO');
-//     }).catch(erro => {
-//         console.log('ERRO ao inserir dados na tabela ENDERECO');
-//     });
+database(`INSERT INTO ENDERECO VALUES 
+(1, 'Olga Erdmann', 'Barra do Rio Cerro', 'Jaraguá do Sul', 'Santa Catarina'),
+(2, 'Afonso Beijamin Barbie', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina'),
+(3, 'Albano Piccoli', 'São Luís', 'Jaraguá do Sul', 'Santa Catarina'),
+(4, 'Rua das Orquídeas', 'Jaraguá 99', 'Jaraguá do Sul', 'Santa Catarina'),
+(5, 'José Narloch', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina')`)
+    .then(result => {
+        console.log('Dados inseridos com SUCESSO na tabela ENDERECO');
+    }).catch(erro => {
+        console.log('ERRO ao inserir dados na tabela ENDERECO');
+    });
 
 
 // database(`INSERT INTO PESSOA VALUES 

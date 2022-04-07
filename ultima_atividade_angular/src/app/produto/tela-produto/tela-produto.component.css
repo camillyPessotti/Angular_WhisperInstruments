@@ -101,8 +101,9 @@ body {
 }
 
 .principal-container {
-    padding: 5%;
+    padding: 1%;
     display: flex;
+    justify-content: space-around;
     width: 100%;
     box-sizing: border-box;
 }
@@ -114,7 +115,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 20%;
-    box-sizing: border-box;
 }
 
 .first-colunm img {
@@ -130,7 +130,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
-    box-sizing: border-box;
 }
 
 .second-colunm img {
@@ -145,7 +144,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 30%;
-    box-sizing: border-box;
 }
 
 .footer-container {
