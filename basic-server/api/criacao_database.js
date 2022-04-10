@@ -52,11 +52,11 @@ database(`CREATE TABLE IF NOT EXISTS CLASSE (
 
 database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     CODIGO INT AUTO_INCREMENT PRIMARY KEY,
-    URL VARCHAR(200) NOT NULL,
+    URL VARCHAR(200),
     INSTRUMENTO VARCHAR(45) NOT NULL,
     MARCA VARCHAR(45) NOT NULL,
     VALOR DOUBLE NOT NULL,
-    COR VARCHAR(45) NOT NULL,
+    COR VARCHAR(45),
     CLASSE_CODIGO INT NOT NULL,
     FOREIGN KEY (CLASSE_CODIGO) REFERENCES CLASSE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE)`)
     .then(result => {
@@ -100,7 +100,6 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela CLIENTE');
 //     }).catch(erro => {
-
 //         console.log('ERRO ao inserir dados na tabela CLIENTE');
 //     });
 
@@ -118,16 +117,26 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 
 
 // database(`INSERT INTO PRODUTO VALUES
-// (1, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/53/1153331_violao-folk-takamine-gd15ce-eletrico-cordas-de-aco-com-afinador-ms_s2_637667990542068446.jpg', 'Violão', 'Giannini', 3500.00, 'Preto', 1),
-// (2, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/60/1160221_violao-folk-strinberg-sd300c-eletrico-cordas-de-aco-ms_s4_637719687222604404.jpg', 'Violão', 'Rozini', 700.00, 'Marrom', 1),
-// (3, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/69/1169762_guitarra-les-paul-gibson-special-tribute-dc-ms_s2_637818276119365976.jpg', 'Guitarra', 'Tagima', 1500.00, 'Vermelho', 4),
-// (4, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/71/1171013_guitarra-super-strato-ibanez-paul-gilbert-signature-micro-pgmm31-ms_s2_637834574976903659.jpg', 'Guitarra', 'Waldman', 5000.00, 'Branco', 4),
-// (5, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/52/1152542_piano-digital-yamaha-arius-ydp-s54-88-teclas-sensitivas-graded-hammer-standard-com-banco-bc-108-preto-bivolt-ms_s3_637660090716949650.jpg', 'Piano', 'Yamaha', 20000.00, 'Preto', 1),
-// (6, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/23/1123617_piano-digital-casio-ap-470we-88-teclas-sensitivas-com-pedal-triplo-banqueta-e-fonte-bivolt-branco-ms_s2_637479434885046831.jpg', 'Piano', 'Casio', 100000.00, 'Branco', 1),
-// (7, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/10/89/1089985_bateria-infantil-premium-dx45j-bumbo-16-com-banco-e-prato-ms_s3_637390689735624496.jpg', 'Bateria', 'Premium', 4000.00, 'Preto', 3),
-// (8, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/69/1169898_bateria-acustica-gretsch-catalina-maple-cm1e825-bumbo-22-com-ferragens-e-pedal-de-bumbo-ms_s9_637832108487717973.jpg', 'Bateria', 'Gretsch', 2000.00, 'Amarelo', 3),
-// (9, 'https://www.le-roseau-oboe.com/cms/wp-content/uploads/2017/11/hautbois-f-loree-royal-125.jpg', 'Oboé', 'Lorée', 2900.00, 'Preto', 2),
-// (10,'https://a-static.mlcdn.com.br/618x463/flauta-transversal-prateada-do-case-fl03s-eagle-o-f-e-r-t/lojacosntelacao/7799744868/394052378e487443659d5135243cf809.jpg', 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
+// (1, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/405612-0-39248da461f4ebe93915855849874064-1024-1024.jpg', 'Violão', 'Takamine', 3058.92, 'Mahogany', 1),
+// (2, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-1121-fff41a307076873ebb15917111458748-1024-1024.jpg', 'Violão', 'Strinberg', 1175.45, 'Tobacco Satin', 1),
+// (3, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/pro_28414_e1-31db15d4d38861a12515919709576520-1024-1024.jpg', 'Guitarra', 'Strinberg', 1258.48, 'Vinho', 4),
+// (4, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-141-8594047e76ae683f1816237647631814-1024-1024.jpg', 'Guitarra', 'Tagima', 1782.66, 'Surf Green', 4),
+// (5, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/418811-0-8480a6348399064f4715855873312836-1024-1024.jpg', 'Contrabaixo', 'Phoenix', 2010.12, 'Natural', 1),
+// (6, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/b5081ba43be8fd5f56d173c17a67aab51-1bdb5e13a8ab6b450816347337664735-1024-1024.jpg', 'Contrabaixo', 'Yamaha', 1686.84, 'Preto', 1),
+// (7, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/420736-0-aa3746422ea470bbc715855874235829-1024-1024.jpg', 'Ukulele', 'Phoenix', 297.08, 'Frozen', 1),
+// (8, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/sem-titulo-131-aab8bc8b7ec4eabc3e16490904296261-1024-1024.jpg', 'Ukulele', 'Stagg', 253.38, 'Ocean', 1),
+// (9, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-1511-f2731a4adfcddcc1ed16196308853423-1024-1024.jpg', 'Piano', 'Casio', 8958.42, 'Branco', 1),
+// (10, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-1231-bb217a40aa5b0ec11416040612332370-640-0.jpg', 'Teclado', 'Yamaha', 2080.04, 'Preto', 4),
+// (11, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/131-0d6c52d91522c0218816370975897420-1024-1024.jpg', 'Bateria', 'Michael', 3976.62, 'Sparkle Marine', 3),
+// (12, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-1101-0c452c17f313db22a116421021296165-1024-1024.jpg', 'Bateria', 'Nagano Onix', 2943.91, 'Deep Silver', 3),
+// (13, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/418142-0-b47fbf023df1e100ce15855872988803-1024-1024.jpg', 'Cajon', 'Elo', 428.18, 'Preto', 3),
+// (14, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/417830-0-86df38a95dc51acfbd15855872715663-1024-1024.jpg', 'Cajon', 'Olé', 262.12, 'Dark Blue', 3),
+// (15, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/383270-0-2c10df45f4304b211e15855842637993-1024-1024.jpg', 'Saxofone', 'Eagle', 6808.38, 'Ouro/Preto', 2),
+// (16, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/377766-0-b8f9eb53597ae12ee315855842578131-1024-1024.jpg', 'Saxofone', 'Eagle', 5567.30, 'Ouro Fosco', 2),
+// (17, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/409182-0-ee31db87cf124dc1e515855850149725-1024-1024.jpg', 'Clarinete', 'Hoyden', 1021.18, 'Preto', 2),
+// (18, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/396778-0-b060d407c4f7bf5b7c15855843437368-1024-1024.jpg', 'Gaita', 'Hering', 197.44, 'Blac Blues', 2),
+// (19, 'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/untitled-161-3e7416873ea33f944016382132520813-1024-1024.jpg', 'Trompete', 'Benson', 1164.52, 'Ouro', 2),
+// (20,'https://d3ugyf2ht6aenh.cloudfront.net/stores/001/114/233/products/396953-0-43804ec12abcbac4e115855843502233-1024-1024.jpg', 'Tuba', 'Hoyden', 11361.92, 'Ouro', 2)`)
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela PRODUTO');
 //     }).catch(erro => {
