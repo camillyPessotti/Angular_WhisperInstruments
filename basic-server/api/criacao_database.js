@@ -53,7 +53,6 @@ database(`CREATE TABLE IF NOT EXISTS CLASSE (
 database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     CODIGO INT AUTO_INCREMENT PRIMARY KEY,
     URL VARCHAR(200) NOT NULL,
-    DESCRICAO VARCHAR(1000),
     INSTRUMENTO VARCHAR(45) NOT NULL,
     MARCA VARCHAR(45) NOT NULL,
     VALOR DOUBLE NOT NULL,
@@ -66,17 +65,17 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
         console.log('ERRO ao criar a tabela PRODUTO');
     });
 
-database(`INSERT INTO ENDERECO VALUES 
-(1, 'Olga Erdmann', 'Barra do Rio Cerro', 'Jaraguá do Sul', 'Santa Catarina'),
-(2, 'Afonso Beijamin Barbie', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina'),
-(3, 'Albano Piccoli', 'São Luís', 'Jaraguá do Sul', 'Santa Catarina'),
-(4, 'Rua das Orquídeas', 'Jaraguá 99', 'Jaraguá do Sul', 'Santa Catarina'),
-(5, 'José Narloch', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina')`)
-    .then(result => {
-        console.log('Dados inseridos com SUCESSO na tabela ENDERECO');
-    }).catch(erro => {
-        console.log('ERRO ao inserir dados na tabela ENDERECO');
-    });
+// database(`INSERT INTO ENDERECO VALUES 
+// (1, 'Olga Erdmann', 'Barra do Rio Cerro', 'Jaraguá do Sul', 'Santa Catarina'),
+// (2, 'Afonso Beijamin Barbie', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina'),
+// (3, 'Albano Piccoli', 'São Luís', 'Jaraguá do Sul', 'Santa Catarina'),
+// (4, 'Rua das Orquídeas', 'Jaraguá 99', 'Jaraguá do Sul', 'Santa Catarina'),
+// (5, 'José Narloch', 'Tifa Martins', 'Jaraguá do Sul', 'Santa Catarina')`)
+//     .then(result => {
+//         console.log('Dados inseridos com SUCESSO na tabela ENDERECO');
+//     }).catch(erro => {
+//         console.log('ERRO ao inserir dados na tabela ENDERECO');
+//     });
 
 
 // database(`INSERT INTO PESSOA VALUES 
@@ -128,7 +127,7 @@ database(`INSERT INTO ENDERECO VALUES
 // (7, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/10/89/1089985_bateria-infantil-premium-dx45j-bumbo-16-com-banco-e-prato-ms_s3_637390689735624496.jpg', 'Bateria', 'Premium', 4000.00, 'Preto', 3),
 // (8, 'https://d3alv7ekdacjys.cloudfront.net/Custom/Content/Products/11/69/1169898_bateria-acustica-gretsch-catalina-maple-cm1e825-bumbo-22-com-ferragens-e-pedal-de-bumbo-ms_s9_637832108487717973.jpg', 'Bateria', 'Gretsch', 2000.00, 'Amarelo', 3),
 // (9, 'https://www.le-roseau-oboe.com/cms/wp-content/uploads/2017/11/hautbois-f-loree-royal-125.jpg', 'Oboé', 'Lorée', 2900.00, 'Preto', 2),
-// (10, 'https://a-static.mlcdn.com.br/618x463/flauta-transversal-prateada-do-case-fl03s-eagle-o-f-e-r-t/lojacosntelacao/7799744868/394052378e487443659d5135243cf809.jpg', 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
+// (10,'https://a-static.mlcdn.com.br/618x463/flauta-transversal-prateada-do-case-fl03s-eagle-o-f-e-r-t/lojacosntelacao/7799744868/394052378e487443659d5135243cf809.jpg', 'Flauta', 'Eagle', 8000.00, 'Prata', 2)`)
 //     .then(result => {
 //         console.log('Dados inseridos com SUCESSO na tabela PRODUTO');
 //     }).catch(erro => {
