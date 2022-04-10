@@ -23,7 +23,11 @@ export class TelaProdutoComponent implements OnInit {
     cor
 
   ngOnInit() {
-    this.index = this.router.url.substring(this.router.url.length - 1)
+    if(this.router.url.length == 15){
+      this.index = this.router.url.substring(this.router.url.length - 1)
+    } else if(this.router.url.length == 16){
+      this.index = this.router.url.substring(this.router.url.length - 2)
+    }
 
     this.usuariosService.buscar_produtos()
     .then((resultado : any) => {

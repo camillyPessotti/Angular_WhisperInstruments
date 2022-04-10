@@ -205,6 +205,11 @@ body {
 
 .social-network {
     padding: 0px 10px;
+    width: 3%;
+}
+
+.social-network img {
+    width: 100%;
 }
 
 .div-informations {
