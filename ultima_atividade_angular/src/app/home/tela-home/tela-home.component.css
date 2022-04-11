@@ -161,11 +161,15 @@ body {
     padding: 10px 0px;
 }
 
+.title-home {
+    padding: 5% 0;
+}
+
 .button-product {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0px;
+    padding: 5% 0;
     width: 100%;
 }
 

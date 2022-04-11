@@ -50,11 +50,7 @@
 
             <div class="second-colunm">
                 <div class="title-instrument">
-                    <h1>{{instrumento}}</h1>
-                </div>
-
-                <div class="infos">
-                    <p>Marca: {{marca}}</p>
+                    <h1>{{instrumento}} {{marca}} {{nome}}</h1>
                 </div>
 
                 <div class="infos">
@@ -62,8 +58,21 @@
                 </div>
 
                 <div class="infos">
-                    <p>Preço: R$ {{valor}}</p>
+                    <p>R$ {{valor}}</p>
                 </div>
+
+                <div class="infos">
+                    <div class="icone-infos">
+                        <i class="fi fi-rr-credit-card"></i>
+                    </div>
+
+                    <div class="text-infos">
+                        <p>{{(valor * 1.02).toFixed(2)}} no cartão de crédito</p>
+                        <p>até 12x de {{((valor * 1.02)/12).toFixed(2)}}</p>
+                    </div>
+                </div>
+
+
 
                 <div class="button-div">
                     <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>

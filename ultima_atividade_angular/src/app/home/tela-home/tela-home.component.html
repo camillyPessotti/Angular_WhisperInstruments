@@ -78,9 +78,14 @@
                 </div>
 
                 <div class="info-product">
-                    <p style="font-size: 20px;">{{produto.INSTRUMENTO}}</p>
-                    <p>Marca: {{produto.MARCA}}</p>
-                    <p>Preço: R$ {{produto.VALOR}}</p>
+                    <div class="title-home">
+                        <p style="font-size: 20px;">{{produto.INSTRUMENTO}} {{produto.NOME}}</p>
+                    </div>
+
+                    <div class="infos">
+                        <p>Marca: {{produto.MARCA}}</p>
+                        <p>Preço: R$ {{produto.VALOR}}</p>
+                    </div>
                 </div>
 
                 <div class="button-product">

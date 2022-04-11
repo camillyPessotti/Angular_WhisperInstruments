@@ -17,6 +17,7 @@ export class TelaProdutoComponent implements OnInit {
     index
     url
     instrumento
+    nome
     valor
     imagem
     marca
@@ -38,6 +39,7 @@ export class TelaProdutoComponent implements OnInit {
         if(valor.CODIGO == this.index){
           this.url = valor.URL
           this.instrumento = valor.INSTRUMENTO
+          this.nome = valor.NOME
           this.valor = valor.VALOR
           this.imagem = valor.URL
           this.marca = valor.MARCA

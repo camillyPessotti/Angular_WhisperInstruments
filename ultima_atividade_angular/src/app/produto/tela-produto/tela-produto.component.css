@@ -101,7 +101,7 @@ body {
 }
 
 .principal-container {
-    padding: 1%;
+    padding: 10% 1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -137,10 +137,24 @@ body {
 
 .title-instrument h1 {
     font-size: 32px;
+    letter-spacing: 1px;
 }
 
 .infos {
     padding: 2% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.icone-infos {
+    padding: 0 5% 0 0;
+}
+
+.text-infos {
+    padding: 0 0 0 5%;
+    width: 100%;
 }
 
 .button-div {
