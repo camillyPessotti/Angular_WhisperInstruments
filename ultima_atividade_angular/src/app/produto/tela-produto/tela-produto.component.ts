@@ -27,6 +27,8 @@ export class TelaProdutoComponent implements OnInit {
       this.index = this.router.url.substring(this.router.url.length - 1)
     } else if(this.router.url.length == 16){
       this.index = this.router.url.substring(this.router.url.length - 2)
+    } else{
+      this.router.navigate([''])
     }
 
     this.usuariosService.buscar_produtos()
