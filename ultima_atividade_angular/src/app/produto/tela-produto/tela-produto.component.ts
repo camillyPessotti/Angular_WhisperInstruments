@@ -47,11 +47,7 @@ export class TelaProdutoComponent implements OnInit {
         }
       })
     })
-
-
-////////DEIXOU LOGADO PERDEU!!!!!!!!!!!!!!!!!!!
-
-
+    
   }
 
   irProHome(){
