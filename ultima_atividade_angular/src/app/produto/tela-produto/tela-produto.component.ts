@@ -54,6 +54,6 @@ export class TelaProdutoComponent implements OnInit {
   }
 
   adicionarAoCarrinho(){
-    
+    this.usuariosService.adicionar_carrinho()
   }
 }

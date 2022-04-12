@@ -21,6 +21,16 @@ inserirRota('/ver_produtos', function(dados, resposta) {
 })
 
 
+inserirRota('/adicionar_carrinho', function(dados, resposta) {
+    database(`INSERT INTO CARRINHO VALUES (null, "${dados.CLIENTE_CODIGO}", "${dados.PRODUTO_CODIGO}")`)
+        .then(result => {
+            resposta(result)
+        }).catch(erro => {
+            console.log('ERRO ao buscar CARRINHO')
+            resposta({ erro })
+        })
+})
+
 // fetch('/api/buscar_usuario', {
 //     method: 'POST',
 //     body: JSON.stringify({

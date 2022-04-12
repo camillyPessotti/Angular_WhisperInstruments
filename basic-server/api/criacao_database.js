@@ -31,7 +31,7 @@ database(`CREATE TABLE IF NOT EXISTS CLIENTE (
     USERNAME VARCHAR(45) NOT NULL, 
     PASSWORD VARCHAR(15) NOT NULL,
     PESSOA_CPF CHAR(11) NOT NULL,
-    FOREIGN KEY (PESSOA_CPF) REFERENCES PESSOA(CPF) ON DELETE CASCADE ON UPDATE CASCADE)`)
+    FOREIGN KEY(PESSOA_CPF) REFERENCES PESSOA(CPF) ON DELETE CASCADE ON UPDATE CASCADE)`)
     .then(result => {
         console.log('Tabela CLIENTE criada com SUCESSO');
     }).catch(erro => {
@@ -59,12 +59,27 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     VALOR DOUBLE NOT NULL,
     COR VARCHAR(45),
     CLASSE_CODIGO INT NOT NULL,
-    FOREIGN KEY (CLASSE_CODIGO) REFERENCES CLASSE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE)`)
+    FOREIGN KEY(CLASSE_CODIGO) REFERENCES CLASSE(CODIGO) ON DELETE CASCADE ON UPDATE CASCADE)`)
     .then(result => {
         console.log('Tabela PRODUTO criada com SUCESSO');
     }).catch(erro => {
         console.log('ERRO ao criar a tabela PRODUTO');
     });
+
+
+database(`CREATE TABLE IF NOT EXISTS CARRINHO (
+        CODIGO INT PRIMARY KEY,
+        CLIENTE_CODIGO INT,
+        PRODUTO_CODIGO INT,
+        FOREIGN KEY(CLIENTE_CODIGO) REFERENCES CLIENTE(CODIGO),
+        FOREIGN KEY(PRODUTO_CODIGO) REFERENCES PRODUTO(CODIGO)
+        )`)
+    .then(result => {
+        console.log('Tabela CARRINHO criada com SUCESSO');
+    }).catch(erro => {
+        console.log('ERRO ao criar a tabela CARRINHO');
+    });
+
 
 // database(`INSERT INTO ENDERECO VALUES 
 // (1, 'Olga Erdmann', 'Barra do Rio Cerro', 'Jaraguá do Sul', 'Santa Catarina'),

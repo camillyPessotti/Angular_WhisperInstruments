@@ -101,7 +101,7 @@ body {
 }
 
 .principal-container {
-    padding: 5% 1%;
+    padding: 1%;
     display: flex;
     justify-content: space-around;
     align-items: center;
