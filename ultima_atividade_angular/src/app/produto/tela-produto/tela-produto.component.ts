@@ -26,6 +26,7 @@ export class TelaProdutoComponent implements OnInit {
   ngOnInit() {
     if(this.router.url.length == 15){
       this.index = this.router.url.substring(this.router.url.length - 1)
+      console.log(this.index)
     } else if(this.router.url.length == 16){
       this.index = this.router.url.substring(this.router.url.length - 2)
     } else{
@@ -35,7 +36,6 @@ export class TelaProdutoComponent implements OnInit {
     this.usuariosService.buscar_produtos()
     .then((resultado : any) => {
       resultado.find(valor => {
-        console.log(valor)
         if(valor.CODIGO == this.index){
           this.url = valor.URL
           this.instrumento = valor.INSTRUMENTO
@@ -54,6 +54,7 @@ export class TelaProdutoComponent implements OnInit {
   }
 
   adicionarAoCarrinho(){
-    this.usuariosService.adicionar_carrinho()
+    this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index)
+    alert("Produto adicionado ao carrinho!")
   }
 }

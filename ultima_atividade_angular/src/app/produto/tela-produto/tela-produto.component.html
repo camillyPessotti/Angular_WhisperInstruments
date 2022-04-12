@@ -59,7 +59,7 @@
 
                 <div class="preco">
                     <h1>R$ {{valor}} à vista</h1>
-                    <p>ou {{(valor * 1.05).toFixed(2)}} no cartão de crédito</p>
+                    <p>ou R$ {{(valor * 1.05).toFixed(2)}} no cartão de crédito</p>
                 </div>
 
                 <div class="formaPagamento">
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="text-infos">
-                        <p>até 12x de {{((valor * 1.05)/12).toFixed(2)}} parcelado</p>
+                        <p>até 12x de R$ {{((valor * 1.05)/12).toFixed(2)}} sem juros</p>
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@
                     </div>
 
                     <div class="text-infos">
-                        <p>{{valor}} no boleto</p>
+                        <p>R$ {{valor}} no boleto</p>
                     </div>
                 </div>
 
@@ -86,7 +86,7 @@
                     <img src="./assets/pix.png" style="width: 5%;">
 
                     <div class="text-infos">
-                        <p>{{(valor - (valor * 0.08)).toFixed(2)}} no pix (8% de desconto)</p>
+                        <p>R$ {{(valor - (valor * 0.08)).toFixed(2)}} no pix (8% de desconto)</p>
                     </div>
                 </div>
 

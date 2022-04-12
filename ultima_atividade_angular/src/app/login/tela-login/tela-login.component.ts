@@ -30,8 +30,8 @@ export class TelaLoginComponent implements OnInit {
     let socialPlatformProvider;
     if(socialPlatform == "google"){
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    } 
-    
+    }
+
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);
@@ -41,6 +41,7 @@ export class TelaLoginComponent implements OnInit {
 }
 
   verifica
+  CODIGO
 
   entrar() {
     this.usuariosService.buscar_clientes()
@@ -49,6 +50,10 @@ export class TelaLoginComponent implements OnInit {
           if (resultado[i].USERNAME == this.user && resultado[i].PASSWORD == this.password) {
             localStorage.setItem("USER", this.user);
             localStorage.setItem("PASSWORD", this.password);
+            if(resultado[i].USERNAME == localStorage.getItem("USER") && resultado[i].PASSWORD == localStorage.getItem("PASSWORD")) {
+              this.CODIGO = resultado[i].CODIGO;
+              localStorage.setItem("CODIGO", this.CODIGO)
+            }
             this.router.navigate(['/tela-carrinho']);
             break;
           }

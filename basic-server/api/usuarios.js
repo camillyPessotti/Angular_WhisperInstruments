@@ -20,6 +20,16 @@ inserirRota('/ver_produtos', function(dados, resposta) {
         })
 })
 
+inserirRota('/ver_carrinho', function(dados, resposta) {
+    database('SELECT * FROM CARRINHO')
+        .then(result => {
+            resposta(result)
+        }).catch(erro => {
+            console.log('ERRO ao buscar CARRINHO')
+            resposta({ erro })
+        })
+})
+
 
 inserirRota('/adicionar_carrinho', function(dados, resposta) {
     database(`INSERT INTO CARRINHO VALUES (null, "${dados.CLIENTE_CODIGO}", "${dados.PRODUTO_CODIGO}")`)
@@ -30,20 +40,3 @@ inserirRota('/adicionar_carrinho', function(dados, resposta) {
             resposta({ erro })
         })
 })
-
-// fetch('/api/buscar_usuario', {
-//     method: 'POST',
-//     body: JSON.stringify({
-//         nome: 'sim',
-//         nickname: 'sim'
-//     }),
-//     headers: {
-//         'Content-Type': 'application/json'
-//     }
-// }).then(function (result){
-//     return result.json();
-// }).then(function (dados){ 
-//     console.log(dados);
-// }).catch(function (erro){
-//     console.log(erro)
-// });

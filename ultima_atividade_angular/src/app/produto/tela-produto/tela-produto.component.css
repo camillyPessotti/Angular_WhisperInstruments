@@ -133,10 +133,13 @@ body {
 
 .title-instrument {
     padding: 4% 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .title-instrument h1 {
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 1px;
 }
 

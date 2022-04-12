@@ -52,4 +52,18 @@ export class UsuariosService {
     })
   }
 
+  buscar_carrinho(){
+    return new Promise((resolvido, rejeitado) => {
+
+      fetch('/api/ver_carrinho', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
 }
