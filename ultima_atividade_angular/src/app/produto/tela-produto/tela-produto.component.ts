@@ -47,11 +47,18 @@ export class TelaProdutoComponent implements OnInit {
         }
       })
     })
+
+
+////////DEIXOU LOGADO PERDEU!!!!!!!!!!!!!!!!!!!
+
+
   }
 
   irProHome(){
     this.router.navigate([''])
   }
+
+  
 
   adicionarAoCarrinho(){
     this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index)
