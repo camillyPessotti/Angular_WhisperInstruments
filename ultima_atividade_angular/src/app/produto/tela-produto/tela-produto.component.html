@@ -57,22 +57,38 @@
                     <p>Cor: {{cor}}</p>
                 </div>
 
-                <div class="infos">
-                    <p>R$ {{valor}}</p>
+                <div class="preco">
+                    <h1>R$ {{valor}} à vista</h1>
+                    <p>ou {{(valor * 1.05).toFixed(2)}} no cartão de crédito</p>
                 </div>
 
-                <div class="infos">
+                <div class="formaPagamento">
                     <div class="icone-infos">
                         <i class="fi fi-rr-credit-card"></i>
                     </div>
 
                     <div class="text-infos">
-                        <p>{{(valor * 1.02).toFixed(2)}} no cartão de crédito</p>
-                        <p>até 12x de {{((valor * 1.02)/12).toFixed(2)}}</p>
+                        <p>até 12x de {{((valor * 1.05)/12).toFixed(2)}} parcelado</p>
                     </div>
                 </div>
 
+                <div class="formaPagamento">
+                    <div class="icone-infos">
+                        <i class="fi fi-rr-money"></i>
+                    </div>
 
+                    <div class="text-infos">
+                        <p>{{valor}} no boleto</p>
+                    </div>
+                </div>
+
+                <div class="formaPagamento">
+                    <img src="./assets/pix.png" style="width: 5%;">
+
+                    <div class="text-infos">
+                        <p>{{(valor - (valor * 0.08)).toFixed(2)}} no pix (8% de desconto)</p>
+                    </div>
+                </div>
 
                 <div class="button-div">
                     <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
