@@ -56,8 +56,8 @@ export class TelaProdutoComponent implements OnInit {
 
   
 
-  adicionarAoCarrinho(){
-    if(localStorage.getItem("USER"))
-    this.usuariosService.adicionar_carrinho()
-  }
+  // adicionarAoCarrinho(){
+  //   if(localStorage.getItem("USER"))
+  //   this.usuariosService.adicionar_carrinho()
+  // }
 }

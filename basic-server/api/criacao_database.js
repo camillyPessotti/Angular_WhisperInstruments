@@ -67,18 +67,18 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
     });
 
 
-database(`CREATE TABLE IF NOT EXISTS CARRINHO (
-        CODIGO INT PRIMARY KEY,
-        CLIENTE_CODIGO INT,
-        PRODUTO_CODIGO INT,
-        FOREIGN KEY(CLIENTE_CODIGO) REFERENCES CLIENTE(CODIGO),
-        FOREIGN KEY(PRODUTO_CODIGO) REFERENCES PRODUTO(CODIGO)
-        )`)
-    .then(result => {
-        console.log('Tabela CARRINHO criada com SUCESSO');
-    }).catch(erro => {
-        console.log('ERRO ao criar a tabela CARRINHO');
-    });
+// database(`CREATE TABLE IF NOT EXISTS CARRINHO (
+//         CODIGO INT PRIMARY KEY,
+//         CLIENTE_CODIGO INT,
+//         PRODUTO_CODIGO INT,
+//         FOREIGN KEY(CLIENTE_CODIGO) REFERENCES CLIENTE(CODIGO),
+//         FOREIGN KEY(PRODUTO_CODIGO) REFERENCES PRODUTO(CODIGO)
+//         )`)
+//     .then(result => {
+//         console.log('Tabela CARRINHO criada com SUCESSO');
+//     }).catch(erro => {
+//         console.log('ERRO ao criar a tabela CARRINHO');
+//     });
 
 
 // database(`INSERT INTO ENDERECO VALUES 
