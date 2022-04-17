@@ -2,12 +2,9 @@
     <div class="tela">
         <div class="inputs">
             <div class="div-inputs">
-
                 <i class="fi fi-rr-user"></i>
 
                 <input [(ngModel)]='user' placeholder="Usuário" type="text">
-
-                <i class="fi fi-rr-eye" style="color: transparent;" (click)='verSenha()'></i>
             </div>
         </div>
 
@@ -15,9 +12,9 @@
             <div class="div-inputs">
                 <i class="fi fi-rr-lock"></i>
 
-                <input [(ngModel)]='password' placeholder="Senha" type="password">
+                <input [(ngModel)]='password' placeholder="Senha" type="password" id="input-senha">
 
-                <i class="fi fi-rr-eye"></i>
+                <i class="fi fi-rr-eye" (click)="mostrarSenha()" id="icon-ver-senha"></i>
             </div>
         </div>
 

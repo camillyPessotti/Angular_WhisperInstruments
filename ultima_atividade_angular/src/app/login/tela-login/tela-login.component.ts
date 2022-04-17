@@ -65,5 +65,16 @@ export class TelaLoginComponent implements OnInit {
   }
 
 
-  verSenha() { }
+  mostrarSenha() {
+    let inputSenha = document.getElementById("input-senha");
+    let iconVerSenha = document.getElementById("icon-ver-senha");
+
+    if(inputSenha.type == "password"){
+      iconVerSenha.className = "fi fi-rr-eye-crossed"
+      inputSenha.type = "text";
+    } else {
+      iconVerSenha.className = "fi fi-rr-eye"
+      inputSenha.type = "password";
+    }
+  }
 }

@@ -100,3 +100,7 @@
 .underline p:hover {
     cursor: pointer;
 }
+
+#icon-ver-senha:hover {
+    cursor: pointer;
+}
