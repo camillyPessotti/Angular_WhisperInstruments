@@ -66,7 +66,7 @@ export class TelaLoginComponent implements OnInit {
 
 
   mostrarSenha() {
-    let inputSenha = document.getElementById("input-senha");
+    let inputSenha = document.getElementById("input-senha") as HTMLInputElement;
     let iconVerSenha = document.getElementById("icon-ver-senha");
 
     if(inputSenha.type == "password"){
