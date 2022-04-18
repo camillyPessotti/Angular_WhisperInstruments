@@ -1,2 +1,51 @@
-<button (click)="irProLogin()">Fazer login</button>
-<button (click)="voltar()">Voltar</button>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="first-container">
+                <div class="div-text">
+                    <div class="text">
+                        <p>ENDEREÇO</p>
+                    </div>
+
+                    <div class="text">
+                        <p>SOBRE</p>
+                    </div>
+
+                    <div class="text">
+                        <p>BLOG</p>
+                    </div>
+                </div>
+
+                <div class="div-icon">
+                    <div class="icon">
+                        <i class="fi fi-rr-shopping-cart" (click)="irProCarrinho()" title="Ir para o carrinho"></i>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fi fi-rr-headset" title="Fale conosco"></i>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fi fi-rr-menu-burger" title="Menu"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-container">
+                <div class="title">
+                    <h1>WHISPER</h1>
+                    <p>INSTRUMENTOS</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div *ngFor="let produto of lista">
+        <div>
+            {{produto.NOME}}
+        </div>
+    </div>
+
+    <button (click)="irProLogin()">Fazer login</button>
+    <button (click)="voltar()">Voltar</button>
+</body>

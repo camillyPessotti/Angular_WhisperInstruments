@@ -24,8 +24,6 @@ export class TelaHomeComponent implements OnInit {
         this.listaProduto.push(valorResultado)
       })
     })
-
-    console.log(this.listaProduto)
   }
 
   irProCarrinho(){

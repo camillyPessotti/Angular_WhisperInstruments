@@ -22,6 +22,7 @@ export class TelaProdutoComponent implements OnInit {
     imagem
     marca
     cor
+    descricao
 
   ngOnInit() {
     if(this.router.url.length == 15){
@@ -35,7 +36,6 @@ export class TelaProdutoComponent implements OnInit {
     this.usuariosService.buscar_produtos()
     .then((resultado : any) => {
       resultado.find(valor => {
-        console.log(valor)
         if(valor.CODIGO == this.index){
           this.url = valor.URL
           this.instrumento = valor.INSTRUMENTO
@@ -44,6 +44,7 @@ export class TelaProdutoComponent implements OnInit {
           this.imagem = valor.URL
           this.marca = valor.MARCA
           this.cor = valor.COR
+          this.descricao = valor.DESCRICAO
         }
       })
     })
@@ -56,8 +57,13 @@ export class TelaProdutoComponent implements OnInit {
 
   
 
-  // adicionarAoCarrinho(){
-  //   if(localStorage.getItem("USER"))
-  //   this.usuariosService.adicionar_carrinho()
-  // }
+  adicionarAoCarrinho(){
+    if(localStorage.getItem("CODIGO")){
+      this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index);
+      this.irProHome();
+    } else{
+      alert("Você precisa estar logado para realizar esta ação!")
+      this.router.navigate(['/tela-login'])
+    }
+  }
 }

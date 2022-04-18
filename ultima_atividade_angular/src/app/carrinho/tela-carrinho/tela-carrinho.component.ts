@@ -16,10 +16,23 @@ export class TelaCarrinhoComponent implements OnInit {
     private usuariosService: UsuariosService,
   ) {}
 
+  lista = [];
+
   ngOnInit() {
     this.usuariosService.buscar_carrinho()
-    .then((resultado: any) => {
-      console.log(resultado)
+    .then((resultados: any) => {
+      resultados.forEach(resultado => {
+      if(resultado.CLIENTE_CODIGO == localStorage.getItem("CODIGO")){
+        this.usuariosService.buscar_produtos()
+        .then((resultadosProduto: any) => {
+            resultadosProduto.find(produto => {
+              if(produto.CODIGO == resultado.PRODUTO_CODIGO){
+                this.lista.push(produto);
+              }
+            })
+        })
+      }  
+    });
     })
   }
 
