@@ -40,3 +40,13 @@ inserirRota('/adicionar_carrinho', function(dados, resposta) {
             resposta({ erro })
         })
 })
+
+inserirRota('/excluir_produto', function(dados, resposta) {
+    database(`DELETE FROM CARRINHO WHERE PRODUTO_CODIGO = ${dados.CODIGO}`)
+        .then(result => {
+            resposta(result)
+        }).catch(erro => {
+            console.log('ERRO ao deletar da tabela CARRINHO')
+            resposta({ erro })
+        })
+})

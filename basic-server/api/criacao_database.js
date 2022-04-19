@@ -69,7 +69,7 @@ database(`CREATE TABLE IF NOT EXISTS PRODUTO (
 
 
 database(`CREATE TABLE IF NOT EXISTS CARRINHO (
-        CODIGO INT PRIMARY KEY,
+        CODIGO INT AUTO_INCREMENT PRIMARY KEY,
         CLIENTE_CODIGO INT,
         PRODUTO_CODIGO INT,
         FOREIGN KEY(CLIENTE_CODIGO) REFERENCES CLIENTE(CODIGO),
@@ -105,7 +105,7 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
 //         console.log('Dados inseridos com SUCESSO na tabela PESSOA');
 //     }).catch(erro => {
 //         console.log('ERRO ao inserir dados na tabela PESSOA');
-//     });
+});
 
 
 // database(`INSERT INTO CLIENTE VALUES 
@@ -130,7 +130,7 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
 //         console.log('Dados inseridos com SUCESSO na tabela CLASSE');
 //     }).catch(erro => {
 //         console.log('ERRO ao inserir dados na tabela CLASSE');
-//     });
+//      });
 
 
 // database(`INSERT INTO PRODUTO VALUES

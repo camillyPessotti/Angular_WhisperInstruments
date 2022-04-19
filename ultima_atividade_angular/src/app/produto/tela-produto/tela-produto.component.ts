@@ -23,6 +23,7 @@ export class TelaProdutoComponent implements OnInit {
     marca
     cor
     descricao
+    verificacao
 
   ngOnInit() {
     if(this.router.url.length == 15){
@@ -61,8 +62,23 @@ export class TelaProdutoComponent implements OnInit {
 
   adicionarAoCarrinho(){
     if(localStorage.getItem("CODIGO")){
-      this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index);
-      this.irProHome();
+      this.usuariosService.buscar_carrinho()
+      .then((resultado: any) => {
+        resultado.find(produto => {
+          if(produto.PRODUTO_CODIGO == this.index){
+            this.verificacao = false
+          } else{
+            this.verificacao = true
+          }
+        }) 
+
+        if(this.verificacao == true){
+          this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index);
+          this.irProHome();
+        } else if(this.verificacao == false){
+          alert("Este produto já está adicionado ao seu carrinho!")
+        }
+    })
     } else{
       alert("Você precisa estar logado para realizar esta ação!")
       this.router.navigate(['/tela-login'])

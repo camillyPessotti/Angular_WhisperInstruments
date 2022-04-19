@@ -54,25 +54,27 @@
                         </div>
 
                         <div class="text-produto">
-                            <h1>{{produto.INSTRUMENTO}} {{produto.NOME}}</h1>
-                            <p>Cor: {{produto.COR}}</p>
-                            <p>Preço: R$ {{produto.PRECO}}</p>
+                            <p style="font-size: 20px;">{{produto.INSTRUMENTO}} {{produto.NOME}}</p>
+                            <p style="font-size: 12px;">Cor: {{produto.COR}}</p>
+                            <p style="font-size: 16px;">Preço: R$ {{produto.VALOR}}</p>
                         </div>
                     </div>
 
                     <div class="icones-produto">
                         <div class="icone">
-                            <i class="fi fi-rr-minus"></i>
-                        </div>
-
-                        <p> 1 </p>
-
-                        <div class="icone">
-                            <i class="fi fi-rr-plus"></i>
+                            <i class="fi fi-rr-minus" title=""></i>
                         </div>
 
                         <div class="icone">
-                            <i class="fi fi-rr-trash"></i>
+                            <p> 1 </p>
+                        </div>
+
+                        <div class="icone">
+                            <i class="fi fi-rr-plus" title=""></i>
+                        </div>
+
+                        <div class="icone">
+                            <i class="fi fi-rr-trash" (click)="excluirProduto()" title="Excluir do carrinho"></i>
                         </div>
                     </div>
                 </div>
@@ -83,9 +85,6 @@
             </div>
         </div>
     </main>
-
-    <button (click)="irProLogin() ">Fazer login</button>
-    <button (click)="voltar() ">Voltar</button>
 
     <footer>
         <div class="footer-container">

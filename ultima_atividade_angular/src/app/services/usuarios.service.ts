@@ -66,4 +66,19 @@ export class UsuariosService {
     })
   }
 
+  excluir_produto(CODIGO){
+    return new Promise((resolvido, rejeitado) => {
+
+      fetch('/api/excluir_produto', {
+        method: 'POST',
+        body: JSON.stringify({CODIGO}),
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then(resultado => resultado.json())
+      .then(resolvido)
+      .catch(rejeitado);
+    })
+  }
+
 }

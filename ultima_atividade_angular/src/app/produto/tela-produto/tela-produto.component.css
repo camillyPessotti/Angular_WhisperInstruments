@@ -100,6 +100,13 @@ body {
     color: #808080;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .principal-container {
     padding: 1%;
     display: flex;
@@ -214,16 +221,35 @@ body {
 }
 
 .div-description {
+    margin: 2%;
     padding: 10%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90vw;
+    background-color: #9e9e9e;
     box-sizing: border-box;
 }
 
+.title-div {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.description-text {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
 .footer-container {
+    margin: 1% 0 0 0;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;

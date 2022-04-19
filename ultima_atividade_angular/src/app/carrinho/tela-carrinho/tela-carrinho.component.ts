@@ -17,6 +17,7 @@ export class TelaCarrinhoComponent implements OnInit {
   ) {}
 
   lista = [];
+  codigo
 
   ngOnInit() {
     this.usuariosService.buscar_carrinho()
@@ -32,7 +33,7 @@ export class TelaCarrinhoComponent implements OnInit {
             })
         })
       }  
-    });
+    })
     })
   }
 
@@ -42,5 +43,8 @@ export class TelaCarrinhoComponent implements OnInit {
 
   irProHome(){
     this.router.navigate([''])
+  }
+
+  excluirProduto(){
   }
 }
