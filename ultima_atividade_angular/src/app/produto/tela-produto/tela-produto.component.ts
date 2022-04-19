@@ -51,11 +51,13 @@ export class TelaProdutoComponent implements OnInit {
     
   }
 
+  fazerLogin(){
+    this.router.navigate(['/tela-login'])
+  }
+
   irProHome(){
     this.router.navigate([''])
   }
-
-  
 
   adicionarAoCarrinho(){
     if(localStorage.getItem("CODIGO")){

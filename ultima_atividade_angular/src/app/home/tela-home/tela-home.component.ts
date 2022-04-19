@@ -26,6 +26,10 @@ export class TelaHomeComponent implements OnInit {
     })
   }
 
+  fazerLogin(){
+    this.router.navigate(['/tela-login'])
+  }
+
   irProCarrinho(){
     this.router.navigate(['/tela-carrinho'])
   }
