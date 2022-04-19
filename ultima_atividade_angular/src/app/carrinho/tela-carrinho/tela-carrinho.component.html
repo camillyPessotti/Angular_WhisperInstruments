@@ -18,7 +18,7 @@
 
                 <div class="div-icon">
                     <div class="icon">
-                        <i class="fi fi-rr-shopping-cart" (click)="irProCarrinho()" title="Ir para o carrinho"></i>
+                        <i class="fi fi-rr-user" (click)="fazerLogin()" title="Fazer login"></i>
                     </div>
 
                     <div class="icon">
@@ -40,12 +40,70 @@
         </div>
     </header>
 
-    <div *ngFor="let produto of lista">
-        <div>
-            {{produto.NOME}}
-        </div>
-    </div>
+    <main>
+        <div class="principal-container">
+            <div class="first-colunm">
+                <div class="produto" *ngFor="let produto of lista">
+                    <div class="infos-produto">
+                        <div class="img-produto">
+                            <img src="{{produto.URL}}" style="width: 100%;">
+                        </div>
 
-    <button (click)="irProLogin()">Fazer login</button>
-    <button (click)="voltar()">Voltar</button>
+                        <div class="text-produto">
+                            <h1>{{produto.INSTRUMENTO}} {{produto.NOME}}</h1>
+                            <p>Cor: {{produto.COR}}</p>
+                            <p>Preço: R$ {{produto.PRECO}}</p>
+                        </div>
+                    </div>
+
+                    <div class="icones-produto">
+                        hpojgpiffg
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-colunm ">
+
+            </div>
+        </div>
+    </main>
+
+    <button (click)="irProLogin() ">Fazer login</button>
+    <button (click)="voltar() ">Voltar</button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="div-social-networks">
+                <div class="social-network">
+                    <img src="./assets/facebook.png">
+                </div>
+
+                <div class="social-network">
+                    <img src="./assets/instagram.png">
+                </div>
+
+                <div class="social-network">
+                    <img src="./assets/twitter.png">
+                </div>
+
+                <div class="social-network">
+                    <img src="./assets/linkedin.png">
+                </div>
+            </div>
+
+            <div class="div-informations">
+                <div class="info">
+                    <p>Informações • Suporte • Marketing</p>
+                </div>
+
+                <div class="info">
+                    <p>Termos de Uso • Política de Privacidade</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2022 Camilly Pessotti</p>
+            </div>
+        </div>
+    </footer>
 </body>

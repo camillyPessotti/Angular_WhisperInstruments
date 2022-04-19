@@ -99,3 +99,108 @@ body {
     letter-spacing: 5px;
     color: #808080;
 }
+
+.principal-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vW;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.first-colunm {
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 75%;
+}
+
+.produto {
+    padding: 1%;
+    margin: 2% 0;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 1pc #9e9e9e;
+}
+
+.infos-produto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+}
+
+.img-produto {
+    padding: 1% 0.5% 1% 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.text-produto {
+    padding: 1% 1% 1% 0.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.second-colunm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+.footer-container {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+
+.div-social-networks {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-network {
+    padding: 0px 10px;
+    width: 3%;
+}
+
+.social-network img {
+    width: 100%;
+}
+
+.div-informations {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.copyright {
+    padding: 10px;
+    font-size: 15px;
+    color: #808080;
+}

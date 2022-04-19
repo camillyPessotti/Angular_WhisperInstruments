@@ -36,12 +36,7 @@ export class TelaCarrinhoComponent implements OnInit {
     })
   }
 
-  irProLogin(){
+  fazerLogin(){
     this.router.navigate(['/tela-login'])
   }
-
-  voltar(){
-    this.router.navigate([''])
-  }
-
 }
