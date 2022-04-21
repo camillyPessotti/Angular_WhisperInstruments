@@ -105,8 +105,7 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
 //         console.log('Dados inseridos com SUCESSO na tabela PESSOA');
 //     }).catch(erro => {
 //         console.log('ERRO ao inserir dados na tabela PESSOA');
-});
-
+//     });
 
 // database(`INSERT INTO CLIENTE VALUES 
 // (1, 'camillypessotti@gmail.com', 'camillyPessotti', '11111', '11111111111'),
@@ -130,7 +129,7 @@ database(`CREATE TABLE IF NOT EXISTS CARRINHO (
 //         console.log('Dados inseridos com SUCESSO na tabela CLASSE');
 //     }).catch(erro => {
 //         console.log('ERRO ao inserir dados na tabela CLASSE');
-//      });
+//     });
 
 
 // database(`INSERT INTO PRODUTO VALUES

@@ -46,6 +46,7 @@ export class TelaProdutoComponent implements OnInit {
           this.marca = valor.MARCA
           this.cor = valor.COR
           this.descricao = valor.DESCRICAO
+          this.index = valor.CODIGO
         }
       })
     })
@@ -62,24 +63,31 @@ export class TelaProdutoComponent implements OnInit {
 
   adicionarAoCarrinho(){
     if(localStorage.getItem("CODIGO")){
+      console.log("Entrou 1")
       this.usuariosService.buscar_carrinho()
       .then((resultado: any) => {
-        resultado.find(produto => {
+        resultado.forEach(produto => {
           if(produto.PRODUTO_CODIGO == this.index){
+            console.log("Entrou 2")
             this.verificacao = false
-          } else{
+          } else if(produto.PRODUTO_CODIGO != this.index){
+            console.log("Entrou 22")
             this.verificacao = true
           }
+          console.log(resultado)
         }) 
 
         if(this.verificacao == true){
+          console.log("Entrou 3")
           this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index);
           this.irProHome();
         } else if(this.verificacao == false){
+          console.log("Entrou 33")
           alert("Este produto já está adicionado ao seu carrinho!")
         }
     })
-    } else{
+    } else {
+      console.log("Entrou 11")
       alert("Você precisa estar logado para realizar esta ação!")
       this.router.navigate(['/tela-login'])
     }

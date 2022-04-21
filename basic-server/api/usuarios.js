@@ -1,4 +1,4 @@
-inserirRota('/ver_clientes', function(dados, resposta) {
+inserirRota('/buscar_clientes', function(dados, resposta) {
     database('SELECT * FROM CLIENTE')
         .then(result => {
             console.log(result);
@@ -10,7 +10,7 @@ inserirRota('/ver_clientes', function(dados, resposta) {
 })
 
 
-inserirRota('/ver_produtos', function(dados, resposta) {
+inserirRota('/buscar_produtos', function(dados, resposta) {
     database('SELECT * FROM PRODUTO')
         .then(result => {
             resposta(result)
@@ -20,7 +20,7 @@ inserirRota('/ver_produtos', function(dados, resposta) {
         })
 })
 
-inserirRota('/ver_carrinho', function(dados, resposta) {
+inserirRota('/buscar_carrinho', function(dados, resposta) {
     database('SELECT * FROM CARRINHO')
         .then(result => {
             resposta(result)
@@ -32,7 +32,7 @@ inserirRota('/ver_carrinho', function(dados, resposta) {
 
 
 inserirRota('/adicionar_carrinho', function(dados, resposta) {
-    database(`INSERT INTO CARRINHO VALUES (null, "${dados.CLIENTE_CODIGO}", "${dados.PRODUTO_CODIGO}")`)
+    database(`INSERT INTO CARRINHO VALUES (null, ${dados.CLIENTE_CODIGO}, ${dados.PRODUTO_CODIGO})`)
         .then(result => {
             resposta(result)
         }).catch(erro => {
@@ -42,7 +42,7 @@ inserirRota('/adicionar_carrinho', function(dados, resposta) {
 })
 
 inserirRota('/excluir_produto', function(dados, resposta) {
-    database(`DELETE FROM CARRINHO WHERE PRODUTO_CODIGO = ${dados.CODIGO}`)
+    database(`DELETE FROM CARRINHO WHERE CODIGO = ${dados.CODIGO}`)
         .then(result => {
             resposta(result)
         }).catch(erro => {

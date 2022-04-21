@@ -11,7 +11,7 @@ export class UsuariosService {
   buscar_clientes() {
     return new Promise((resolvido, rejeitado) => {
 
-      fetch('/api/ver_clientes', {
+      fetch('/api/buscar_clientes', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -26,7 +26,7 @@ export class UsuariosService {
   buscar_produtos(){
     return new Promise((resolvido, rejeitado) => {
 
-      fetch('/api/ver_produtos', {
+      fetch('/api/buscar_produtos', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -55,7 +55,7 @@ export class UsuariosService {
   buscar_carrinho(){
     return new Promise((resolvido, rejeitado) => {
 
-      fetch('/api/ver_carrinho', {
+      fetch('/api/buscar_carrinho', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
