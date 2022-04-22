@@ -80,19 +80,15 @@ export class TelaProdutoComponent implements OnInit {
           }
         }
 
-        console.log(this.verificacao);
-
         if(this.verificacao == true){
-          this.usuariosService.adicionar_carrinho((resultado.length+1), localStorage.getItem("CODIGO"), this.index);
+          this.usuariosService.adicionar_carrinho((resultado.length + 1), localStorage.getItem("CODIGO"), this.index);
           this.irProHome();
         } else if(this.verificacao == false){
 
           alert("Este produto já está adicionado ao seu carrinho!")
         }
-        console.log(resultado)
     })
     } else {
-      console.log("Entrou 11")
       alert("Você precisa estar logado para realizar esta ação!")
       this.router.navigate(['/tela-login'])
     }
