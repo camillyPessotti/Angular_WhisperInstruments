@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
 import Swal from 'sweetalert2';
-import { AsyncAction } from 'rxjs/internal/scheduler/AsyncAction';
 
 @Component({
   selector: 'app-tela-carrinho',
@@ -61,9 +60,9 @@ export class TelaCarrinhoComponent implements OnInit {
                 cancelButtonColor: '#d33',
                 cancelButtonText: 'Cancelar',
                 confirmButtonText: 'Excluir'
-              }).then((result) => {
+              }).then(async (result) => {
                 if (result.isConfirmed) {
-                  Swal.fire(
+                  await Swal.fire(
                     'Excluído!',
                     'Seu produto foi excluído do carrinho.',
                     'success'
