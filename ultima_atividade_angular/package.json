@@ -24,6 +24,7 @@
         "angular-6-social-login-v2": "^1.0.5",
         "core-js": "^2.5.4",
         "rxjs": "~6.2.0",
+        "sweetalert2": "^11.4.9",
         "zone.js": "~0.8.26"
     },
     "devDependencies": {

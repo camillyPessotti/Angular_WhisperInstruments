@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tela-produto',
@@ -65,7 +66,6 @@ export class TelaProdutoComponent implements OnInit {
     if(localStorage.getItem("CODIGO")){
       await this.usuariosService.buscar_carrinho()
       .then((resultado: any) => {
-        console.log(resultado)
         if(resultado.length == 0){
           this.verificacao = true;
         } else {
@@ -84,12 +84,15 @@ export class TelaProdutoComponent implements OnInit {
           this.usuariosService.adicionar_carrinho((resultado.length + 1), localStorage.getItem("CODIGO"), this.index);
           this.irProHome();
         } else if(this.verificacao == false){
-
-          alert("Este produto já está adicionado ao seu carrinho!")
+          Swal.fire('Este produto já está adicionado ao seu carrinho!')
         }
     })
     } else {
-      alert("Você precisa estar logado para realizar esta ação!")
+       await Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Você precisa estar logado para realizar esta ação!'
+      })
       this.router.navigate(['/tela-login'])
     }
   }
