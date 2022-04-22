@@ -246,6 +246,7 @@ main {
     justify-content: center;
     align-items: flex-end;
     width: 100%;
+    white-space: pre-wrap;
 }
 
 .footer-container {
