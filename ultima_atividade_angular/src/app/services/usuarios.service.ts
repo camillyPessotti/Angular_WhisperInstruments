@@ -37,16 +37,16 @@ export class UsuariosService {
     })
   }
 
-  adicionar_carrinho(CLIENTE_CODIGO, PRODUTO_CODIGO){
+  adicionar_carrinho(CODIGO, CLIENTE_CODIGO, PRODUTO_CODIGO){
     return new Promise((resolvido, rejeitado) => {
 
       fetch('/api/adicionar_carrinho', {
         method: 'POST',
-        body: JSON.stringify({CLIENTE_CODIGO, PRODUTO_CODIGO}),
+        body: JSON.stringify({CODIGO, CLIENTE_CODIGO, PRODUTO_CODIGO}),
         headers: {
           'Content-type': 'application/json'
         }
-      }).then(resultado => resultado.json())
+      })
       .then(resolvido)
       .catch(rejeitado);
     })

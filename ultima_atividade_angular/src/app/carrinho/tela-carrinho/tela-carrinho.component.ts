@@ -45,6 +45,18 @@ export class TelaCarrinhoComponent implements OnInit {
     this.router.navigate([''])
   }
 
-  excluirProduto(){
+  excluirProduto(idProduto){
+    this.usuariosService.buscar_carrinho()
+    .then((resultados: any) => {
+      resultados.find(resultado => {
+        if(resultado.CLIENTE_CODIGO == localStorage.getItem("CODIGO")){
+          console.log("Teste 1")
+          if(resultado.PRODUTO_CODIGO == idProduto){
+            console.log("Teste 2")
+            this.usuariosService.excluir_produto(resultado.CODIGO)
+          }
+        }
+      })
+    })   
   }
 }

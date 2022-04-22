@@ -32,7 +32,7 @@ inserirRota('/buscar_carrinho', function(dados, resposta) {
 
 
 inserirRota('/adicionar_carrinho', function(dados, resposta) {
-    database(`INSERT INTO CARRINHO VALUES (null, ${dados.CLIENTE_CODIGO}, ${dados.PRODUTO_CODIGO})`)
+    database(`INSERT INTO CARRINHO (CODIGO, CLIENTE_CODIGO, PRODUTO_CODIGO) VALUES (${dados.CODIGO}, ${dados.CLIENTE_CODIGO}, ${dados.PRODUTO_CODIGO})`)
         .then(result => {
             resposta(result)
         }).catch(erro => {

@@ -61,30 +61,35 @@ export class TelaProdutoComponent implements OnInit {
     this.router.navigate([''])
   }
 
-  adicionarAoCarrinho(){
+  async adicionarAoCarrinho(){
     if(localStorage.getItem("CODIGO")){
-      console.log("Entrou 1")
-      this.usuariosService.buscar_carrinho()
+      await this.usuariosService.buscar_carrinho()
       .then((resultado: any) => {
-        resultado.forEach(produto => {
-          if(produto.PRODUTO_CODIGO == this.index){
-            console.log("Entrou 2")
-            this.verificacao = false
-          } else if(produto.PRODUTO_CODIGO != this.index){
-            console.log("Entrou 22")
-            this.verificacao = true
+        console.log(resultado)
+        if(resultado.length == 0){
+          this.verificacao = true;
+        } else {
+
+          for(let i = 0; i < resultado.length; i++){
+            if(resultado[i].PRODUTO_CODIGO == this.index){
+              this.verificacao = false;
+              i = resultado.length;
+            } else {
+              this.verificacao = true;
+            }
           }
-          console.log(resultado)
-        }) 
+        }
+
+        console.log(this.verificacao);
 
         if(this.verificacao == true){
-          console.log("Entrou 3")
-          this.usuariosService.adicionar_carrinho(localStorage.getItem("CODIGO"), this.index);
+          this.usuariosService.adicionar_carrinho((resultado.length+1), localStorage.getItem("CODIGO"), this.index);
           this.irProHome();
         } else if(this.verificacao == false){
-          console.log("Entrou 33")
+
           alert("Este produto já está adicionado ao seu carrinho!")
         }
+        console.log(resultado)
     })
     } else {
       console.log("Entrou 11")
