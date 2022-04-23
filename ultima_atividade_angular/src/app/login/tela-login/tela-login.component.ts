@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
+import Swal from 'sweetalert2';
 
 import {
   AuthService,
@@ -30,18 +31,18 @@ export class TelaLoginComponent implements OnInit {
     let socialPlatformProvider;
     if(socialPlatform == "google"){
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    }
+    };
 
-    this.socialAuthService.signIn(socialPlatformProvider).then(
+    this.socialAuthService.signIn(socialPlatformProvider)
+    .then(
       (userData) => {
         console.log(socialPlatform+" sign in data : " , userData);
-        this.router.navigate(['/tela-carrinho'])
-    }
-  );
-}
+        this.router.navigate(['/tela-carrinho']);
+    })
+};
 
-  verifica
-  CODIGO
+  verifica;
+  CODIGO;
 
   entrar() {
     this.usuariosService.buscar_clientes()
@@ -52,17 +53,38 @@ export class TelaLoginComponent implements OnInit {
             localStorage.setItem("PASSWORD", this.password);
             if(resultado[i].USERNAME == localStorage.getItem("USER") && resultado[i].PASSWORD == localStorage.getItem("PASSWORD")) {
               this.CODIGO = resultado[i].CODIGO;
-              localStorage.setItem("CODIGO", this.CODIGO)
+              localStorage.setItem("CODIGO", this.CODIGO);
             }
             this.router.navigate(['/tela-carrinho']);
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
+              }
+            });
+            
+            Toast.fire({
+              icon: 'success',
+              title: 'Conectado com sucesso!'
+            });
             break;
-          }
+          };
+
           if(i == resultado.length - 1){
-            alert("Usuário inválido!");
-          }
-        }
-      })
-  }
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Usuário inválido!'
+            });
+          };
+        };
+      });
+  };
 
 
   mostrarSenha() {
@@ -70,11 +92,11 @@ export class TelaLoginComponent implements OnInit {
     let iconVerSenha = document.getElementById("icon-ver-senha");
 
     if(inputSenha.type == "password"){
-      iconVerSenha.className = "fi fi-rr-eye-crossed"
+      iconVerSenha.className = "fi fi-rr-eye-crossed";
       inputSenha.type = "text";
     } else {
-      iconVerSenha.className = "fi fi-rr-eye"
+      iconVerSenha.className = "fi fi-rr-eye";
       inputSenha.type = "password";
-    }
-  }
-}
+    };
+  };
+};

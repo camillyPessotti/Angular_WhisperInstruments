@@ -29,21 +29,21 @@ export class TelaCarrinhoComponent implements OnInit {
                 resultadosProduto.find(produto => {
                   if (produto.CODIGO == resultado.PRODUTO_CODIGO) {
                     this.lista.push(produto);
-                  }
-                })
-              })
-          }
-        })
-      })
-  }
+                  };
+                });
+              });
+          };
+        });
+      });
+  };
 
   fazerLogin() {
-    this.router.navigate(['/tela-login'])
-  }
+    this.router.navigate(['/tela-login']);
+  };
 
   irProHome() {
-    this.router.navigate([''])
-  }
+    this.router.navigate(['']);
+  };
 
   excluirProduto(produto_codigo) {
     this.usuariosService.buscar_carrinho()
@@ -66,14 +66,14 @@ export class TelaCarrinhoComponent implements OnInit {
                     'Excluído!',
                     'Seu produto foi excluído do carrinho.',
                     'success'
-                  )
-                  this.usuariosService.excluir_produto(resultado.CODIGO)
-                  location.reload()
-                }
-              })
-            }
-          }
-        })
-      })
-  }
-}
+                  );
+                  this.usuariosService.excluir_produto(resultado.CODIGO);
+                  location.reload();
+                };
+              });
+            };
+          };
+        });
+      });
+  };
+};

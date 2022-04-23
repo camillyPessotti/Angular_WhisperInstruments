@@ -21,21 +21,21 @@ export class TelaHomeComponent implements OnInit {
     this.usuariosService.buscar_produtos()
     .then((resultado: any) => {
       resultado.find(valorResultado => {
-        this.listaProduto.push(valorResultado)
-      })
-    })
-  }
+        this.listaProduto.push(valorResultado);
+      });
+    });
+  };
 
   fazerLogin(){
-    this.router.navigate(['/tela-login'])
-  }
+    this.router.navigate(['/tela-login']);
+  };
 
   irProCarrinho(){
-    this.router.navigate(['/tela-carrinho'])
-  }
+    this.router.navigate(['/tela-carrinho']);
+  };
 
   verProduto(i){
-    this.router.navigate(['/tela-produto', i])
-  }
+    this.router.navigate(['/tela-produto', i]);
+  };
   
 }
