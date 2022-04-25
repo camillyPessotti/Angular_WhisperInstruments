@@ -7,6 +7,7 @@ import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { TelaHomeComponent } from './home/tela-home/tela-home.component';
 import { TelaCarrinhoComponent } from './carrinho/tela-carrinho/tela-carrinho.component';
 import { TelaProdutoComponent } from './produto/tela-produto/tela-produto.component';
+import { CheckLogged } from './CheckLogged';
 
 import {
   SocialLoginModule,
@@ -17,7 +18,7 @@ import {
 const routes: Routes = [
   {path: '', component: TelaHomeComponent},
   {path: 'tela-login', component: TelaLoginComponent},
-  {path: 'tela-carrinho', component: TelaCarrinhoComponent},
+  {path: 'tela-carrinho', component: TelaCarrinhoComponent, canActivate: [ CheckLogged ]},
   {path: 'tela-produto/:id_produto', component: TelaProdutoComponent}  
 ]
 
@@ -51,7 +52,9 @@ export function getAuthServiceConfigs() {
   providers: [{
     provide: AuthServiceConfig,
     useFactory: getAuthServiceConfigs
-  }],
+  },
+  CheckLogged
+],
   bootstrap: [AppComponent]
 })
 
