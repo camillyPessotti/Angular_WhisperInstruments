@@ -17,7 +17,8 @@ export class TelaCarrinhoComponent implements OnInit {
   ) { }
 
   lista = [];
-  codigo
+  codigo;
+  quantidade = 1;
 
   ngOnInit() {
     this.usuariosService.buscar_carrinho()
@@ -28,7 +29,7 @@ export class TelaCarrinhoComponent implements OnInit {
               .then((resultadosProduto: any) => {
                 resultadosProduto.find(produto => {
                   if (produto.CODIGO == resultado.PRODUTO_CODIGO) {
-                    this.lista.push(produto);
+                    this.lista.push({produto: produto, quantidade: 1});
                   };
                 });
               });
@@ -43,6 +44,16 @@ export class TelaCarrinhoComponent implements OnInit {
 
   irProHome() {
     this.router.navigate(['']);
+  };
+
+  removerUm(i){
+    if(this.lista[i].quantidade > 1){
+      this.lista[i].quantidade--;
+    };
+  };
+
+  adicionarUm(i){
+    this.lista[i].quantidade++;
   };
 
   excluirProduto(produto_codigo) {

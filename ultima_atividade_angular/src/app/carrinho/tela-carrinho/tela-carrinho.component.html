@@ -47,30 +47,30 @@
     <main>
         <div class="principal-container">
             <div class="first-colunm">
-                <div class="produto" *ngFor="let produto of lista">
+                <div class="produto" *ngFor="let produto of lista; let index=index">
                     <div class="infos-produto">
                         <div class="img-produto">
-                            <img src="{{produto.URL}}" style="width: 100%;">
+                            <img src="{{produto.produto.URL}}" style="width: 100%;">
                         </div>
 
                         <div class="text-produto">
-                            <p style="font-size: 20px;">{{produto.INSTRUMENTO}} {{produto.NOME}}</p>
-                            <p style="font-size: 12px;">Cor: {{produto.COR}}</p>
-                            <p style="font-size: 16px;">Preço: R$ {{produto.VALOR}}</p>
+                            <p style="font-size: 20px;">{{produto.produto.INSTRUMENTO}} {{produto.produto.NOME}}</p>
+                            <p style="font-size: 12px;">Cor: {{produto.produto.COR}}</p>
+                            <p style="font-size: 16px;">Preço: R$ {{produto.produto.VALOR}}</p>
                         </div>
                     </div>
 
                     <div class="icones-produto">
                         <div class="icone">
-                            <i class="fi fi-rr-minus" title=""></i>
+                            <i class="fi fi-rr-minus" title="Remover mais um" (click)="removerUm(index)"></i>
                         </div>
 
                         <div class="icone">
-                            <p> 1 </p>
+                            <p>{{produto.quantidade}}</p>
                         </div>
 
                         <div class="icone">
-                            <i class="fi fi-rr-plus" title=""></i>
+                            <i class="fi fi-rr-plus" title="Adicionar mais um" (click)="adicionarUm(index)"></i>
                         </div>
 
                         <div class="icone">
