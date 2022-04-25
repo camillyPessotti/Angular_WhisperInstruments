@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
 import Swal from 'sweetalert2';
+import { ProdutoModule } from 'src/app/produto/produto.module';
 
 @Component({
   selector: 'app-tela-carrinho',
@@ -19,8 +20,9 @@ export class TelaCarrinhoComponent implements OnInit {
   lista = [];
   codigo;
   quantidade = 1;
+  precoTotal = 0;
 
-  ngOnInit() {
+  async ngOnInit() {
     this.usuariosService.buscar_carrinho()
       .then((resultados: any) => {
         resultados.forEach(resultado => {
@@ -36,6 +38,10 @@ export class TelaCarrinhoComponent implements OnInit {
           };
         });
       });
+      setTimeout(() => {
+        this.funcaoPrecoTotal();
+      }, 500);
+
   };
 
   fazerLogin() {
@@ -50,11 +56,23 @@ export class TelaCarrinhoComponent implements OnInit {
     if(this.lista[i].quantidade > 1){
       this.lista[i].quantidade--;
     };
+    this.funcaoPrecoTotal();
   };
 
   adicionarUm(i){
     this.lista[i].quantidade++;
+    this.funcaoPrecoTotal();
   };
+
+
+  funcaoPrecoTotal(){
+    this.precoTotal = 0;
+    for(let i = 0; i < this.lista.length; i++){
+      this.precoTotal += this.lista[i].produto.VALOR * this.lista[i].quantidade;
+      // console.log(this.lista[i].quantidade)
+    }
+
+  }
 
   excluirProduto(produto_codigo) {
     this.usuariosService.buscar_carrinho()

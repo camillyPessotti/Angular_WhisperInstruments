@@ -193,6 +193,67 @@ body {
     box-shadow: 0 0 1pc #9e9e9e;
 }
 
+.titulo-resumo {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.infos-resumo {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.first-infos {
+    padding: 2%;
+    border-bottom: #000000 1px solid;
+}
+
+.first-infos p {
+    padding: 5% 0;
+}
+
+.second-infos {
+    padding: 2%;
+}
+
+.second-infos p {
+    padding: 5% 0;
+}
+
+.botao-resumo {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.botao-resumo button {
+    padding: 2% 4%;
+    width: auto;
+    height: 50%;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+.botao-resumo button:hover {
+    cursor: pointer;
+    background-color: #ff5100;
+    transition: .4s;
+}
+
 .footer-container {
     padding: 20px 0px;
     display: flex;

@@ -87,7 +87,15 @@
                     </div>
 
                     <div class="infos-resumo">
-                        {{valorTotal}}
+                        <div class="first-infos">
+                            <p style="color: #808080;">Subtotal: R$ {{precoTotal.toFixed(2)}}</p>
+
+                            <p style="color: #808080;">Valor do frete: R$ 19.99</p>
+                        </div>
+
+                        <div class="second-infos">
+                            <p>Total: R$ {{(precoTotal + 19.99).toFixed(2)}}</p>
+                        </div>
                     </div>
 
                     <div class="botao-resumo">
