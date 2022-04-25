@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="icone">
-                            <i class="fi fi-rr-trash" (click)="excluirProduto(produto.CODIGO)" title="Excluir do carrinho"></i>
+                            <i class="fi fi-rr-trash" (click)="excluirProduto(produto.produto.CODIGO)" title="Excluir do carrinho"></i>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="infos-resumo">
-
+                        {{valorTotal}}
                     </div>
 
                     <div class="botao-resumo">
