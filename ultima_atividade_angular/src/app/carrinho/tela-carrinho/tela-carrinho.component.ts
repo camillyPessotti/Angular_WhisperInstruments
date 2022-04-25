@@ -56,7 +56,7 @@ export class TelaCarrinhoComponent implements OnInit {
                 text: "Você não pode reverter isto!",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#7066e0',
                 cancelButtonColor: '#d33',
                 cancelButtonText: 'Cancelar',
                 confirmButtonText: 'Excluir'
